@@ -180,7 +180,7 @@
     avatarWindow.setAttribute('role', 'button');
     avatarWindow.setAttribute('tabindex', '0');
     avatarWindow.setAttribute('aria-label', '点击查看简历');
-    avatarWindow.innerHTML = '<div class="scene25d-avatar-window__ring"></div><img src="images/photo-life-2.png" alt="黄佩嘉" onerror="this.src=\'images/avatar-home-shoes-cutout.png\'" />';
+    avatarWindow.innerHTML = '<div class="scene25d-avatar-window__ring"></div><img src="images/avatar-portrait.jpg" alt="黄佩嘉" onerror="this.src=\'images/avatar-home-cutout.png\'" />';
     avatarWindow.addEventListener('click', openResume);
     avatarWindow.addEventListener('keydown', function (e) {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openResume(); }
