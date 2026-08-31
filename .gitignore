@@ -1,0 +1,22 @@
+# 系统文件
+.DS_Store
+
+# 临时调试文件
+_dbg_*.js
+_*.py
+_*.png
+_sprite_test.html
+
+# 截图和预览图
+room-*.png
+click-room-*.png
+home-*.png
+ref-room.png
+改进方案_*.md
+
+# 备份目录
+_backup/
+images/pptx/_backup_big/
+
+# 备份文件
+*.bak
