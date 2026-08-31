@@ -1,6 +1,19 @@
 # 系统文件
 .DS_Store
 
+# 旧版本/废弃代码
+room3d-new.js
+script.js
+js/README.md
+
+# 3D房间用的图片（当前2.5D版本不用）
+images/avatar-3d-*
+images/bear-dog-*
+images/golden-*
+images/avatar-cartoon-*
+images/avatar-art-*
+images/photo-life-*
+
 # 临时调试文件
 _dbg_*.js
 _*.py
