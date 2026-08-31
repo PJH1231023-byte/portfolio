@@ -83,7 +83,6 @@ var workDetails = {
       '视频链接：https://my.feishu.cn/wiki/BtonwroMHiQ5yvkrW1jcHtNcnlf'
     ],
     gallery: [
-      { src: 'images/pptx/image3.jpeg', caption: '作品介绍 · 品牌概念与色彩矩阵', wide: true },
       { src: 'images/pptx/image4.png', caption: '色彩矩阵 · 粉黛 / 柠檬黄 / 粉末蓝 / 奶油色' },
       { src: 'images/pptx/image5.png', caption: '角色设定 · 主角塞莱斯特 (Celeste)' },
       { src: 'images/pptx/image6.png', caption: '制作流程 · 7 步：角色设定→剧本→分镜→文生图→图生视频→文生音乐→剪辑', wide: true },
