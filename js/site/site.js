@@ -322,6 +322,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var desc = document.getElementById('modalDesc');
       var list = document.getElementById('modalList');
       var gallery = document.getElementById('modalGallery');
+      var modalBody = modal.querySelector('.modal__body');
 
       function open(key) {
         var d = workDetails[key];
@@ -365,18 +366,74 @@ document.addEventListener('DOMContentLoaded', function () {
         (d.gallery || []).forEach(function (item) {
           var fig = document.createElement('figure');
           if (item.wide) fig.className = 'is-wide';
-          var img = document.createElement('img');
-          img.src = item.src;
-          img.alt = item.caption || '';
-          img.loading = 'lazy';
-          fig.appendChild(img);
-          if (item.caption) {
-            var cap = document.createElement('figcaption');
-            cap.textContent = item.caption;
-            fig.appendChild(cap);
+          
+          if (item.isLink) {
+            // 链接类型：渲染成可点击的游戏入口按钮
+            var linkBtn = document.createElement('a');
+            linkBtn.href = item.src;
+            linkBtn.target = '_blank';
+            linkBtn.rel = 'noopener noreferrer';
+            linkBtn.style.cssText = 'display:block;padding:40px 20px;text-align:center;background:rgba(163,230,53,0.08);border:1px solid rgba(163,230,53,0.3);border-radius:8px;color:#a3e635;text-decoration:none;font-family:JetBrains Mono,monospace;font-size:16px;transition:all 0.2s;';
+            linkBtn.innerHTML = '🎮 ' + (item.caption || '点击打开') + ' ↗';
+            linkBtn.addEventListener('mouseenter', function() {
+              this.style.background = 'rgba(163,230,53,0.15)';
+              this.style.boxShadow = '0 0 20px rgba(163,230,53,0.2)';
+            });
+            linkBtn.addEventListener('mouseleave', function() {
+              this.style.background = 'rgba(163,230,53,0.08)';
+              this.style.boxShadow = 'none';
+            });
+            fig.appendChild(linkBtn);
+          } else {
+            // 普通图片
+            var img = document.createElement('img');
+            img.src = item.src;
+            img.alt = item.caption || '';
+            img.loading = 'lazy';
+            fig.appendChild(img);
+            if (item.caption) {
+              var cap = document.createElement('figcaption');
+              cap.textContent = item.caption;
+              fig.appendChild(cap);
+            }
           }
           gallery.appendChild(fig);
         });
+
+        // 游戏嵌入：如果作品有 gameEmbed 字段，直接显示游戏，隐藏文字介绍
+        var existingGame = document.getElementById('modalGameEmbed');
+        if (existingGame) existingGame.remove();
+        
+        // 恢复默认显示
+        cover.style.display = '';
+        cat.style.display = '';
+        title.style.display = '';
+        desc.style.display = '';
+        list.style.display = '';
+        gallery.style.display = '';
+        
+        if (d.gameEmbed && modalBody) {
+          // 隐藏文字介绍部分
+          cover.style.display = 'none';
+          cat.style.display = 'none';
+          title.style.display = 'none';
+          desc.style.display = 'none';
+          list.style.display = 'none';
+          gallery.style.display = 'none';
+          
+          // 直接显示游戏
+          var gameWrap = document.createElement('div');
+          gameWrap.id = 'modalGameEmbed';
+          gameWrap.style.cssText = 'margin:0;padding:0;text-align:center;';
+          
+          var iframe = document.createElement('iframe');
+          iframe.src = d.gameEmbed;
+          iframe.style.cssText = 'width:100%;max-width:460px;height:720px;border:none;border-radius:12px;background:#0a0e0a;display:block;margin:0 auto;';
+          iframe.setAttribute('sandbox', 'allow-scripts allow-same-origin');
+          
+          gameWrap.appendChild(iframe);
+          modalBody.appendChild(gameWrap);
+        }
 
         modal.classList.add('is-open', 'is-loading');
         modal.setAttribute('aria-hidden', 'false');

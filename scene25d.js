@@ -66,7 +66,7 @@
     }
   };
 
-  /* ===== 洞洞板布局（分类摆放：品牌/IP/UI+视频/平面，4列均匀间距） ===== */
+  /* ===== 洞洞板布局（分类摆放：品牌4 / IP4 / 混合4 / 视频3居中） ===== */
   var PEG_LAYOUT = [
     { y: 8, items: [
       { type: 'keychain', x: 10, id: 'woola' },
@@ -84,10 +84,13 @@
       { type: 'keychain', x: 10, id: 'wangcaicai' },
       { type: 'keychain', x: 35, id: 'pet-app' },
       { type: 'keychain', x: 60, id: 'odyssey' },
-      { type: 'keychain', x: 85, id: 'orderly-journey' }
+      { type: 'keychain', x: 85, id: 'word-of-plants' }
     ]},
     { y: 74, items: [
-      { type: 'keychain', x: 43, id: 'word-of-plants' }
+      { type: 'keychain', x: 10, id: 'orderly-journey' },
+      { type: 'keychain', x: 35, id: 'eye-mountain-river' },
+      { type: 'keychain', x: 60, id: 'filter-life' },
+      { type: 'keychain', x: 85, id: 'snake-game' }
     ]}
   ];
 
@@ -180,7 +183,7 @@
     avatarWindow.setAttribute('role', 'button');
     avatarWindow.setAttribute('tabindex', '0');
     avatarWindow.setAttribute('aria-label', '点击查看简历');
-    avatarWindow.innerHTML = '<div class="scene25d-avatar-window__ring"></div><img src="images/avatar-portrait.jpg" alt="黄佩嘉" onerror="this.src=\'images/avatar-home-cutout.png\'" />';
+    avatarWindow.innerHTML = '<div class="scene25d-avatar-window__ring"></div><img src="images/photo-life-2.png" alt="黄佩嘉" onerror="this.src=\'images/avatar-home-cutout.png\'" />';
     avatarWindow.addEventListener('click', openResume);
     avatarWindow.addEventListener('keydown', function (e) {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openResume(); }
