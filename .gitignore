@@ -34,6 +34,7 @@ ref-room.png
 # 备份目录
 _backup/
 images/pptx/_backup_big/
+images/_backup_new_images/
 
 # 备份文件
 *.bak

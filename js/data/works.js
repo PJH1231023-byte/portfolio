@@ -92,7 +92,7 @@ var workDetails = {
   'eye-mountain-river': {
     cat: 'FILM · AI 视频',
     title: '眼中山河 / Eyes of Mountains',
-    cover: 'images/eye-mountain-cover.png',
+    cover: 'images/eye-mountain-cover.jpg',
     desc: '《眼中山河》是一支63秒的AI品牌广告片，为2026上海国际AIGC创新大赛参赛作品。全程AI生成图片与视频，真人配音。灵感源自宋代五大名窑——汝、官、哥、钧、定的釉色。以宋代釉色为色卡，从天然矿物和植物中寻找相同颜色——石青、花青、朱砂、蛤粉——研磨成粉，做成眼影。色彩从盘中蘸取，化为山河，最终又回到盘中。',
     list: [
       '品牌：青釉 QINGYOU',
@@ -104,15 +104,15 @@ var workDetails = {
       '视频链接：https://my.feishu.cn/wiki/Vy8BwixUAit3tDk53J9coYcOnmh'
     ],
     gallery: [
-      { src: 'images/eye-mountain-product1.png', caption: '青釉 QINGYOU · 品牌Logo与产品', wide: true },
-      { src: 'images/eye-mountain-product2.png', caption: '产品展示 · 眼影盘与宋代釉色' },
+      { src: 'images/eye-mountain-product1.jpg', caption: '青釉 QINGYOU · 品牌Logo与产品', wide: true },
+      { src: 'images/eye-mountain-product2.jpg', caption: '产品展示 · 眼影盘与宋代釉色' },
       { src: 'images/eye-mountain-product3.png', caption: '品牌视觉 · 釉色灵感与设计' }
     ]
   },
   'filter-life': {
     cat: 'FILM · AI 视频',
     title: '滤镜人生 / Filter Life',
-    cover: 'images/filter-life-cover-new.png',
+    cover: 'images/filter-life-cover-new.jpg',
     desc: '《滤镜人生》是一支53秒的AI叙事短视频。讲的是社交媒体P图焦虑的故事——我们花在P图上的时间比化妆还久，在社交媒体上展示的完美背后，是无数次推脸、缩鼻、调色。但P到最后，最累的是自己。这条视频想说的是：P图不是造假，是我们想把自己觉得好看的那一面留下来。而那个没P的、有点瑕疵的你，也一样真实。全程 MiniMax H3 生成，以本人照片制作三视图为人物原型。',
     list: [
       '类型：AI叙事短视频 / 53秒',
@@ -122,8 +122,8 @@ var workDetails = {
       '视频链接：https://my.feishu.cn/wiki/NfsEwrmGvimhakk9FuOcq4suneg'
     ],
     gallery: [
-      { src: 'images/filter-life-keyframe1.png', caption: '视频关键帧 · 社交媒体与P图焦虑', wide: true },
-      { src: 'images/filter-life-3view.png', caption: '角色设定 · 以本人照片制作三视图' }
+      { src: 'images/filter-life-keyframe1.jpg', caption: '视频关键帧 · 社交媒体与P图焦虑', wide: true },
+      { src: 'images/filter-life-3view.jpg', caption: '角色设定 · 以本人照片制作三视图' }
     ]
   },
   'snake-game': {
@@ -191,9 +191,9 @@ var workDetails = {
       { src: 'images/pptx/image19.jpeg', caption: '表情包延展 · 续' },
       { src: 'images/pptx/image20.jpeg', caption: '表情包延展 · 续' },
       { src: 'images/pptx/image21.jpeg', caption: '表情包延展 · 续' },
-      { src: 'images/elena-3view.png', caption: '【IP衍生设计】Elena · 角色三视图 — 灵感源自月灵兔星辰能量', wide: true },
-      { src: 'images/elena-stickers1.png', caption: '【IP衍生设计】Elena · 表情包合集（一）' },
-      { src: 'images/elena-stickers2.png', caption: '【IP衍生设计】Elena · 表情包合集（二）', wide: true },
+      { src: 'images/elena-3view.jpg', caption: '【IP衍生设计】Elena · 角色三视图 — 灵感源自月灵兔星辰能量', wide: true },
+      { src: 'images/elena-stickers1.jpg', caption: '【IP衍生设计】Elena · 表情包合集（一）' },
+      { src: 'images/elena-stickers2.jpg', caption: '【IP衍生设计】Elena · 表情包合集（二）', wide: true },
       { src: 'images/elena-sticker-single.png', caption: '【IP衍生设计】Elena · 表情包单张展示' }
     ]
   },
