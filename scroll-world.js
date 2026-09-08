@@ -93,7 +93,7 @@ function openDesktop(){if(!desktop.open)desktop.showModal();syncModal();}
 function openContact(){
  WorkShowcase.pause(projectDialog);clearTimeout(drawTimer);drawing=false;
  $('#project-type').textContent='CONTACT / EMAIL';
- $('#project-content').innerHTML=`<section class="contact-card"><p class="kicker">LET'S KEEP IN TOUCH</p><h2 id="project-title">联系我</h2><p>如果有合适的岗位或合作机会，欢迎给我写信。</p><label for="contact-email">电子邮箱</label><div class="contact-email-row"><input id="contact-email" type="text" value="${escape(contactEmail)}" readonly spellcheck="false" autocomplete="off"><button type="button" data-copy-contact>复制邮箱</button></div><p id="contact-copy-status" class="contact-copy-status" role="status" aria-live="polite">复制邮箱地址，即可在你的邮箱中给我写信。</p></section>`;
+ $('#project-content').innerHTML=`<section class="contact-card"><p class="kicker">LET'S KEEP IN TOUCH</p><h2 id="project-title">联系我</h2><p>欢迎通过邮箱与我联系。</p><label for="contact-email">电子邮箱</label><div class="contact-email-row"><input id="contact-email" type="text" value="${escape(contactEmail)}" readonly spellcheck="false" autocomplete="off"><button type="button" data-copy-contact>复制邮箱</button></div><p id="contact-copy-status" class="contact-copy-status" role="status" aria-live="polite">复制邮箱地址，即可在你的邮箱中给我写信。</p></section>`;
  if(!projectDialog.open)projectDialog.showModal();syncModal();
 }
 async function copyContact(){
