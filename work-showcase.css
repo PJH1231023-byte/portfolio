@@ -1,0 +1,6 @@
+.work-showcase{width:100%;margin:32px 0;padding:clamp(16px,3vw,32px);border:1px solid #b7a4b53b;border-radius:18px;background:linear-gradient(135deg,#bd95b414,#7dafa711);box-sizing:border-box;text-align:left}
+.work-showcase .showcase-label{font-size:10px;letter-spacing:.18em;opacity:.65}
+.work-showcase h3{margin:10px 0;font-size:clamp(18px,2.5vw,27px);font-weight:500;line-height:1.5}
+.work-showcase p{font-size:13px;line-height:1.9;opacity:.8;margin:10px 0 18px}
+.work-showcase-video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;border-radius:10px;background:#211829}
+.work-showcase .showcase-note{font-size:11px;margin:12px 0 0;opacity:.65}

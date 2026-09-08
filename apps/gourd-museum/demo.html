@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>葫芦数字博物馆 · 策展演示</title><link rel="stylesheet" href="demo.css?v=18f0501503c3"><script src="demo.js?v=ba34aba550ff" defer></script></head>
+<body><main class="film" id="film">
+ <header><span class="seal">葫</span><div><small>GOURD MUSEUM / A CURATOR'S ROOM</small><h1>把家里的珍藏，放进自己的博物馆。</h1></div><span class="demo-label">策展流程演示</span></header>
+ <div class="stage">
+  <iframe id="room" src="index.html?presentation=1" title="书架、桌柜与地面的自动陈列演示" tabindex="-1"></iframe>
+  <div class="capture" id="capture">
+   <div class="capture-copy"><p class="eyebrow">FROM A PHOTO TO A COLLECTION</p><h2>一张照片，<br>一个新的展位。</h2><p>用手机记录每一只葫芦的形状与纹理。<br>在光线充足、主体清晰的环境下拍摄。</p><small>照片与抠图使用示意素材，呈现原 MVP 的操作流程。</small></div>
+   <div class="phone"><span class="camera-dot"></span><div class="snapshot"><i class="clutter one"></i><i class="clutter two"></i><i class="clutter three"></i><svg class="gourd-art" viewBox="0 0 192 280" aria-label="葫芦照片示意"><defs><linearGradient id="skin"><stop stop-color="#88602f"/><stop offset=".3" stop-color="#c39753"/><stop offset=".6" stop-color="#e7c984"/><stop offset="1" stop-color="#98692e"/></linearGradient></defs><path d="M94 42C47 34 38 103 73 132C10 158 22 251 95 254C172 255 180 165 118 132C156 94 139 36 94 42Z" fill="url(#skin)"/><path d="M96 44C94 16 121 34 116 14" fill="none" stroke="#745732" stroke-width="6" stroke-linecap="round"/></svg><div class="scan"></div></div><p id="photo-label">手机照片 · 主体清晰</p></div>
+   <div class="cutout-result"><span>背景分离后</span><div class="checker" id="cutout-art"></div><small>保留轮廓与纹理<br>以图片卡片构成伪 3D 展品</small></div>
+  </div>
+  <div class="room-tags"><span>书架陈列</span><span>桌面 · 矮柜</span><span>地面展位</span></div>
+  <div class="scene-caption"><div><small id="step-number">01 / 05</small><h2 id="step-title">手机拍照，记录真实藏品</h2><p id="step-copy">让葫芦被清楚地看见，是数字收藏的第一步。</p></div><span id="action-badge">光线充足 · 主体清晰</span></div>
+ </div>
+ <footer><div class="chapters" id="chapters" aria-label="演示章节"></div><div class="playback"><button id="play" aria-label="暂停演示">暂停</button><button id="replay">重播 ↻</button><span id="time">00:00 / 00:32</span></div><div class="track"><div id="progress"></div></div></footer>
+ <p class="film-note">依据原项目流程制作的展示样例 · 自动播放 · 可暂停或切换章节</p>
+</main></body></html>

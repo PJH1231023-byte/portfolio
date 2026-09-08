@@ -1,0 +1,2 @@
+/* Preserve the game's landscape viewport when opened inside portfolio case pages. */
+iframe[src*="games/spirit-roam/"]{aspect-ratio:16/9;height:auto!important;min-height:0!important;max-width:100%;background:#eee2e8}

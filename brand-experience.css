@@ -1,0 +1,17 @@
+/* Brand-only presentation. Navigation is owned by brand-experience.html/js. */
+.brand-experience .brand-return{font-size:13px;white-space:nowrap;padding:10px 0;border-bottom:1px solid var(--line)}
+.brand-experience .brand-stage .hotspot{min-height:44px}
+.brand-experience .brand-stage .hotspot[data-edge="end"]{flex-direction:row-reverse;transform:translate(calc(-100% + 12px),-50%)}
+.brand-experience .brand-stage .hotspot:last-child .hot-label{transform:none}
+.brand-experience .brand-stage .hotspot:hover .hot-label,.brand-experience .brand-stage .hotspot:focus-visible .hot-label{background:#f5ebd9;color:#201b21}
+.brand-experience .brand-page .project-gallery figure:first-child{display:block}
+.brand-experience .brand-room{transition:transform .3s ease-out}
+.brand-experience .brand-shortcuts .pill,.brand-experience .dialog-close,.brand-experience .mix-options .pill{min-height:44px}
+.brand-experience .detail-dialog{overscroll-behavior:contain}
+.brand-experience .detail-dialog img{object-fit:contain}
+.brand-experience .detail-dialog button:focus-visible{outline-color:#52624d}
+.brand-experience .mix-result{overflow-wrap:anywhere}
+.brand-experience .mix-result>span{font-size:clamp(25px,5vw,38px)}
+.brand-experience .loading-fallback p:last-child{margin-top:24px}
+@media(max-width:650px){.brand-experience .dream-header{min-height:98px;display:grid;grid-template-columns:1fr auto;gap:8px 16px}.brand-experience .dream-header nav{grid-column:1/-1;grid-row:2;justify-content:start;gap:30px}.brand-experience .brand-return{font-size:12px}.brand-experience .brand-heading h1{font-size:clamp(29px,8vw,40px)}.brand-experience .brand-shortcuts .pill{font-size:13px}.brand-experience .mix-result{padding:28px 20px}.brand-experience .mix-options{gap:10px}}
+@media(prefers-reduced-motion:reduce),(hover:none){.brand-experience .brand-room{transform:none;transition:none}}

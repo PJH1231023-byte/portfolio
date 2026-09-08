@@ -1,0 +1,7 @@
+/* Animate the five approved portraits directly; no duplicate entrance images. */
+.character-stage .featured,.character-stage .featured.arrive,.character-stage .party-member,.character-stage.opening .featured,.character-stage.opening .party-member{animation:none!important;transition:filter .2s;transform-origin:50% 70%;will-change:transform}
+.party-member canvas{width:100%;height:100%;display:block;pointer-events:none}
+.character-stage.opening .party-member,.character-stage.opening .featured{pointer-events:none}
+.character-stage.opening .character-caption{opacity:0}
+.character-stage .featured{max-height:390px}
+@media(orientation:landscape) and (max-height:600px){.character-stage .featured{max-height:none}}

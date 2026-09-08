@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#eff0df">
+  <meta name="description" content="绒绒野餐会：选择动物或点心伙伴，瞄准发射、三个合一，在软乎乎的野餐小院里闯关。">
+  <title>绒绒野餐会 · Little Picnic Club</title>
+  <link rel="stylesheet" href="style.css?v=8a627715f260">
+  <script src="engine.js?v=picnic3" defer></script>
+  <script src="campaign.js?v=picnic3" defer></script>
+  <script src="series.js" defer></script>
+  <script src="texture.js?v=picnic2" defer></script>
+  <script src="game.js?v=21f8ff599325" defer></script>
+</head>
+<body>
+  <svg class="svg-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 3 6.5 7 1-5 5 1.2 7L12 18l-6.2 3.5 1.2-7-5-5 7-1Z"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol>
+    <symbol id="i-sound" viewBox="0 0 24 24"><path d="m11 4-6 5H2v6h3l6 5 0-16ZM15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/></symbol>
+    <symbol id="i-undo" viewBox="0 0 24 24"><path d="m9 4-6 6 6 6M3 10h11a6 6 0 0 1 0 12"/></symbol>
+    <symbol id="i-swap" viewBox="0 0 24 24"><path d="M3 7h17m-5-5 5 5-5 5M21 17H4m5-5-5 5 5 5"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 5C8 2 5 3 2 4v16c4-2 7-1 10 1 3-2 6-3 10-1V4c-3-1-6-2-10 1Zm0 0v16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 22V3c5-5 9 5 15 0v10c-6 5-10-5-15 0"/></symbol>
+    <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9 8a3 3 0 1 1 5 3c-2 1-2 2-2 3m0 3v.1"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M4 20c-5-13 8-18 16-17 1 10-4 20-14 14M4 20 16 8"/></symbol>
+  </svg>
+  <section id="title-screen" class="title-screen" aria-labelledby="home-title">
+    <div class="title-illustration">
+      <p class="title-edition">LITTLE PICNIC CLUB · VOL. 01</p>
+      <h1 id="home-title">绒绒<br>野餐会<span>一起碰头，慢慢变好。</span></h1>
+      <div class="title-friends" aria-hidden="true"><span class="spirit-art theme-art friend-cat" data-art-source="animals" style="--sx:0%;--sy:0%"></span><span class="spirit-art theme-art friend-dog" data-art-source="animals" style="--sx:33.333%;--sy:0%"></span><span class="spirit-art theme-art friend-cake" data-art-source="food" style="--sx:100%;--sy:100%"></span></div>
+      <p class="title-note">瞄准，发射，三个同伴合成一位新朋友。<br>带上你的小可爱，赴一场软乎乎的相遇。</p>
+    </div>
+    <div class="title-menu">
+      <nav class="title-nav" aria-label="主菜单"><button type="button" data-menu-dialog="help">怎么玩</button><button type="button" data-menu-dialog="album">伙伴图鉴</button><button type="button" data-menu-dialog="settings">设置</button></nav>
+      <p class="eyebrow">TODAY'S LITTLE INVITATION</p><h2>今天，和谁一起玩？</h2>
+      <div class="title-themes" role="group" aria-label="选择野餐主题">
+        <button type="button" data-theme="animals" aria-pressed="true"><span class="spirit-art theme-art" data-art-source="animals" style="--sx:0%;--sy:0%"></span><span><b>绒绒动物园</b><small>八位毛绒动物，慢慢相遇</small></span></button>
+        <button type="button" data-theme="food" aria-pressed="false"><span class="spirit-art theme-art" data-art-source="food" style="--sx:0%;--sy:0%"></span><span><b>点心野餐会</b><small>把香香甜甜抱进怀里</small></span></button>
+      </div>
+      <p id="home-progress" class="home-progress" role="status">正在准备你的小伙伴…</p>
+      <button type="button" id="home-start" class="home-start" disabled>开始野餐 <span>↗</span></button>
+      <button type="button" id="home-restart" class="home-restart" hidden>从第一关重新开始</button>
+      <p class="home-save-note">两组主题分别保存进度 · 每组八关旅程</p>
+      <button type="button" id="home-exit" class="home-exit">← 返回作品集</button>
+    </div>
+  </section>
+  <main class="picnic-layout" id="play-screen" hidden inert>
+    <aside class="club-sidebar">
+      <a class="back-link" href="../../scroll-world.html#theatre">← 回到创作室</a>
+      <div class="club-mark"><span class="spirit-art theme-art" data-art-source="animals" style="--sx:0%;--sy:0%"></span><div><small>LITTLE PICNIC CLUB</small><h1>绒绒野餐会</h1></div></div>
+      <p class="club-description">带上你的小可爱，<br>赴一场软乎乎的相遇。</p>
+      <div class="section-label"><span>今天和谁玩</span><span>02 THEMES</span></div>
+      <div class="theme-picker">
+        <button class="theme-card" type="button" data-theme="animals" aria-pressed="true"><span class="spirit-art theme-art" data-art-source="animals" style="--sx:0%;--sy:0%"></span><span><b>绒绒动物园</b><small>八位动物，八种小性格</small></span><i>↗</i></button>
+        <button class="theme-card" type="button" data-theme="food" aria-pressed="false"><span class="spirit-art theme-art" data-art-source="food" style="--sx:0%;--sy:0%"></span><span><b>点心野餐会</b><small>把香香甜甜抱进怀里</small></span><i>↗</i></button>
+      </div>
+      <div class="chapter-heading"><span>本局野餐旅程</span><button type="button" data-map>旅程 ↗</button></div>
+      <div class="chapter-path" id="chapter-path" aria-label="八个关卡"></div>
+      <div class="sidebar-profile"><button type="button" class="profile-picture" data-avatar-button aria-label="选择玩家头像"><span class="spirit-art avatar-art" data-avatar-art></span><i>＋</i></button><span><b>野餐小队长</b><small>换一个心情，换一个头像</small></span></div>
+      <p class="local-note">两组旅程分别记录，下次再见也记得你。</p>
+    </aside>
+
+    <section class="game-room" aria-label="绒绒野餐会游戏">
+      <canvas id="board" width="480" height="780" tabindex="0" aria-label="合成桌。左右方向键瞄准，空格发射，P 暂停。" aria-describedby="play-instructions"></canvas>
+      <header class="room-header">
+        <button class="profile-picture" type="button" data-avatar-button aria-label="选择玩家头像"><span class="spirit-art avatar-art" data-avatar-art></span><i>＋</i></button>
+        <div class="room-brand"><small>LITTLE PICNIC CLUB</small><h2>绒绒野餐会</h2></div>
+        <button class="icon-button" id="sound-button" aria-label="开启音效" aria-pressed="false"><svg><use href="#i-sound"/></svg></button>
+        <button class="icon-button menu-button" id="pause-button" aria-label="打开游戏菜单">菜单</button>
+      </header>
+      <div class="room-themes" role="group" aria-label="选择动物或食物主题">
+        <button type="button" data-theme="animals" aria-pressed="true"><span class="spirit-art theme-art" data-art-source="animals" style="--sx:0%;--sy:0%"></span><span>绒绒动物园</span></button>
+        <button type="button" data-theme="food" aria-pressed="false"><span class="spirit-art theme-art" data-art-source="food" style="--sx:0%;--sy:0%"></span><span>点心野餐会</span></button>
+      </div>
+      <section class="mission-card" aria-label="本关目标">
+        <div class="mission-ribbon"><button type="button" data-map><svg><use href="#i-flag"/></svg><span id="level-label">第 01 关</span><span>⌄</span></button><span id="level-name">第一次碰头</span></div>
+        <div class="mission-body"><span class="spirit-art" id="goal-art" style="--sx:33.333%;--sy:0%"></span><div><small>这次的小心愿</small><strong id="goal-target">合成 1 个趴趴饼干狗</strong><div class="goal-line"><div class="goal-track" id="goal-progress" role="progressbar" aria-label="本关合成目标" aria-valuemin="0" aria-valuemax="1" aria-valuenow="0"><i id="goal-fill"></i></div><span id="goal-count">0 / 1</span></div></div></div>
+      </section>
+      <div class="play-stats"><span><svg><use href="#i-star"/></svg><strong id="score">0</strong><small>星光</small></span><span>本局已发射 <b id="moves">0</b> 次</span></div>
+      <div id="toast" class="toast" role="status" aria-live="polite"></div>
+      <p class="launch-hint" id="play-instructions">按住瞄准，松手让它出发</p>
+      <div class="launcher-tools">
+        <button class="tool-button" id="undo-button" disabled><svg><use href="#i-undo"/></svg><span>退一步<small id="undo-count">剩 3 次</small></span></button>
+        <span class="current-caption" id="current-caption">正在出发：歪耳花花猫</span>
+        <button class="next-button" id="swap-button" aria-label="交换当前和下一位伙伴"><span><small>下一位</small><svg><use href="#i-swap"/></svg></span><span class="spirit-art" id="next-art" style="--sx:33.333%;--sy:0%"></span></button>
+      </div>
+      <button class="album-shelf" id="album-button" aria-label="打开伙伴合成图鉴"><span id="mini-album" class="mini-album"></span><span class="album-tab"><svg><use href="#i-book"/></svg><small>图鉴</small></span></button>
+      <div class="loading-label" id="loading-label" role="status"><span class="loading-flower">✿</span><span>正在铺好野餐桌…</span></div>
+      <noscript><p class="loading-label">请启用 JavaScript 来加入野餐会。</p></noscript>
+    </section>
+
+    <aside class="collection-sidebar">
+      <div class="collection-heading"><span class="small-flower">✿</span><span><small>THE LITTLE COLLECTION</small><h2>今天的碰头伙伴</h2></span></div>
+      <p id="theme-description">每一位小伙伴，都有自己的小性格。</p>
+      <div class="side-album" id="side-album"></div>
+      <div class="mini-recipe"><span>低级随机登场</span><i>→</i><span>高级靠合成</span></div>
+      <div class="club-record"><span><small>旅程星星</small><b id="star-total">0 / 48</b></span><span><small>最多星光</small><b id="best-score">0</b></span></div>
+      <button class="help-link" id="help-button" type="button"><svg><use href="#i-help"/></svg>第一次来？看看怎么玩</button>
+      <p class="keyboard-note">← → 瞄准 · 空格发射 · P 暂停<br>每四次发射，伙伴会向桌边挪一点。</p>
+    </aside>
+  </main>
+
+  <dialog id="game-dialog" aria-labelledby="dialog-title">
+    <button class="dialog-close" id="dialog-close" aria-label="关闭窗口"><svg><use href="#i-close"/></svg></button>
+    <p class="eyebrow" id="dialog-eyebrow">A LITTLE PICNIC MOMENT</p><h2 id="dialog-title">休息一下</h2>
+    <div id="dialog-content"></div><div class="dialog-actions" id="dialog-actions"></div>
+  </dialog>
+  <p class="sr-only" id="game-announcement" aria-live="polite"></p>
+</body>
+</html>

@@ -1,0 +1,32 @@
+/* Optional discovery beside the direct portfolio entry. */
+body.inspiration-is-open{overflow:hidden!important}
+#atelier-discovery-mount{display:inline-flex}
+.inspiration-tag{position:relative;display:inline-flex;align-items:center;min-height:44px;padding:8px 17px 8px 30px;border:1px solid #cabd9f;border-radius:2px;background:#e5dbc4;color:#29383a;font:13px/1.6 var(--serif,serif);letter-spacing:.04em;box-shadow:2px 3px 0 #050e1938;transform:rotate(-2deg);transition:transform .18s ease,background .18s ease}
+.inspiration-tag:before{content:"";position:absolute;left:11px;top:50%;width:5px;height:5px;border:1px solid #9c8d71;border-radius:50%;transform:translateY(-50%);background:#12202c}
+.inspiration-tag:hover{transform:rotate(0deg) translateY(-1px);background:#efe6d1}
+.inspiration-tag:focus-visible{outline:2px solid #ead7ad;outline-offset:5px}
+.inspiration-dialog{width:min(760px,calc(100vw - 36px));max-width:none;max-height:calc(100svh - 36px);margin:auto;padding:22px;background:#e9e0ce;color:#24333b;border:1px solid #c4b799;border-radius:3px;box-shadow:0 24px 90px #040b14a6;overflow:auto;overscroll-behavior:contain}
+.inspiration-dialog::backdrop{background:#07131ecf;backdrop-filter:blur(5px)}
+.inspiration-dialog *{box-sizing:border-box}
+.inspiration-topline{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:12px}
+.inspiration-topline>span{font:11px/1.5 var(--roman,serif);letter-spacing:.11em;color:#5b625b}
+.inspiration-close{background:none;color:#35433f;border:0;min-height:44px;padding:8px 0 8px 14px;font-size:13px;white-space:nowrap}
+.inspiration-print{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr);place-items:center;min-width:0;min-height:160px;height:min(46svh,390px);background:#d8d4c8;border:1px solid #c8c2b3;overflow:hidden;transform-origin:50% 80%}
+.inspiration-image{display:block;min-width:0;min-height:0;width:100%;height:100%;max-height:100%;object-fit:contain;object-position:center}
+.inspiration-image-message{padding:25px;text-align:center;font-size:14px;line-height:1.8;color:#4f5b56}
+.inspiration-caption{padding:20px 1px 21px;border-bottom:1px solid #b9ad9666}
+.inspiration-category{font:12px/1.7 var(--roman,serif);letter-spacing:.06em;color:#586558}
+.inspiration-caption h2{margin:6px 0 0;font:400 clamp(23px,3.8vw,33px)/1.45 var(--serif,serif);overflow-wrap:anywhere;letter-spacing:.025em}
+.inspiration-footer{display:flex;align-items:center;justify-content:space-between;gap:18px;padding-top:17px}
+.inspiration-position{font:14px/1.5 var(--roman,serif);letter-spacing:.08em;color:#596657;white-space:nowrap}
+.inspiration-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.inspiration-next,.inspiration-open{min-height:44px;padding:9px 17px;border:1px solid #8c9787;background:transparent;color:#344b40;border-radius:2px;font:14px/1.6 var(--serif,serif)}
+.inspiration-open{background:#203c3a;border-color:#203c3a;color:#f4eedf}
+.inspiration-next:hover{background:#dcd7c5}
+.inspiration-open:hover{background:#304e46}
+.inspiration-dialog button:focus-visible{outline:2px solid #365b58;outline-offset:4px}
+.inspiration-print.is-turning{animation:inspiration-paper-turn .3s ease-out}
+@keyframes inspiration-paper-turn{from{transform:perspective(1000px) rotateY(-7deg) translateY(6px)}to{transform:perspective(1000px) rotateY(0) translateY(0)}}
+body.reduce-motion .inspiration-tag,body.reduce-motion .inspiration-print{animation:none!important;transition:none!important;transform:none!important}
+@media(prefers-reduced-motion:reduce){.inspiration-tag,.inspiration-print{animation:none!important;transition:none!important;transform:none!important}}
+@media(max-width:520px){.inspiration-dialog{width:calc(100vw - 24px);max-height:calc(100svh - 24px);padding:15px}.inspiration-topline{gap:8px;margin-bottom:9px}.inspiration-topline>span{font-size:10px;letter-spacing:.05em}.inspiration-close{font-size:12px}.inspiration-print{height:min(43svh,330px);min-height:150px}.inspiration-caption{padding:16px 1px}.inspiration-category{font-size:11px}.inspiration-caption h2{font-size:24px}.inspiration-footer{align-items:flex-start;flex-direction:column;gap:12px;padding-top:14px}.inspiration-actions{width:100%;gap:9px}.inspiration-next{flex:1}.inspiration-open{flex:2}.inspiration-next,.inspiration-open{font-size:13px;padding:10px 12px}}
