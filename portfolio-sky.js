@@ -2,7 +2,8 @@
 (() => {
   const opening = document.querySelector('.entry-chapter');
   const bottom = opening?.querySelector('.entry-bottom');
-  if (!bottom) return;
+  const desk = opening?.querySelector('.entry-desk');
+  if (!bottom || !desk) return;
   const skies = [
     {id:'cliffs',name:'宇宙山脊',title:'宇宙山脊 · 船底座星云',en:'COSMIC CLIFFS / NGC 3324',src:'images/sky/cosmic-cliffs-desktop.webp',srcset:'images/sky/cosmic-cliffs-mobile.webp 720w, images/sky/cosmic-cliffs-desktop.webp 1440w, images/sky/cosmic-cliffs-full.webp 1536w',full:'images/sky/cosmic-cliffs-full.webp',preview:'images/sky/cosmic-cliffs-preview.webp',fallback:'images/sky/cosmic-cliffs-fallback.jpg',position:'65% 48%',color:'#c69a68',note:'韦布望远镜的红外观测，经可见色映射呈现。',credit:'NASA, ESA, CSA, STScI',url:'https://science.nasa.gov/asset/webb/cosmic-cliffs-in-the-carina-nebula-nircam-image/',alt:'蓝色星空下，金色星际尘埃形成绵延的山脊轮廓。'},
     {id:'rho',name:'星云花园',title:'星云花园 · 蛇夫座 ρ',en:'RHO OPHIUCHI / STELLAR NURSERY',src:'images/sky/rho-ophiuchi-desktop.webp',srcset:'images/sky/rho-ophiuchi-mobile.webp 720w, images/sky/rho-ophiuchi-desktop.webp 1440w, images/sky/rho-ophiuchi-full.webp 1536w',full:'images/sky/rho-ophiuchi-full.webp',preview:'images/sky/rho-ophiuchi-preview.webp',fallback:'images/sky/rho-ophiuchi-fallback.jpg',position:'60% 48%',color:'#bc91a2',note:'韦布望远镜的红外观测，经可见色映射呈现。',credit:'Image: NASA, ESA, CSA, STScI, Klaus Pontoppidan (STScI); Image Processing: Alyssa Pagan (STScI)',url:'https://science.nasa.gov/asset/webb/rho-ophiuchi-nircam-image/',alt:'深色星云间，红色喷流与淡金色尘埃围绕明亮的新生恒星。'},
@@ -20,14 +21,15 @@
   const controls = document.createElement('div');
   controls.className = 'sky-controls';
   controls.innerHTML = '<span class="sky-controls-label">窗外</span><div class="sky-choices" role="group" aria-label="选择窗外的风景"></div><button class="sky-expand" type="button" aria-haspopup="dialog" aria-controls="portfolio-sky-dialog">看一会儿风景 <span aria-hidden="true">↗</span></button>';
-  bottom.insertBefore(controls,bottom.lastElementChild);
+  const deskNote = desk.querySelector('.entry-desk-note');
+  desk.insertBefore(controls,deskNote);
   const credit = document.createElement('p');
   credit.className = 'sky-credit';
   credit.hidden = true;
-  bottom.appendChild(credit);
+  desk.insertBefore(credit,deskNote);
   const status = document.createElement('p');
   status.className = 'sr-only'; status.setAttribute('role','status');
-  bottom.appendChild(status);
+  desk.insertBefore(status,deskNote);
 
   const dialog = document.createElement('dialog');
   dialog.className = 'sky-dialog'; dialog.id = 'portfolio-sky-dialog';

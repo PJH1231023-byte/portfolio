@@ -14,7 +14,7 @@ const sectionDefinitions=[
  {id:'paper',category:'print',label:'字体与印刷'},
  {id:'theatre',category:'play',label:'小游戏'}
 ];
-function catalogueSections(works){return sectionDefinitions.map(section=>({...section,works:Object.keys(works).filter(id=>id!=='more'&&type(works[id])===section.category)}));}
+function catalogueSections(works){return sectionDefinitions.map(section=>({...section,works:Object.keys(works).filter(id=>id!=='more'&&(type(works[id])===section.category||(works[id].sections||[]).includes(section.category)))}));}
 function sequence(progress,count){return Math.min(Math.max(0,count-1),Math.floor(clamp(progress)*Math.max(1,count)));}
 root.ScrollWorldModel={clamp,range,progress,phases,orbit,escape,type,catalogueSections,sequence};
 if(typeof module!=='undefined')module.exports=root.ScrollWorldModel;

@@ -1,0 +1,18 @@
+{
+  "calligraphy": {
+    "original": "originals/calligraphy.jpg",
+    "asset": "calligraphy/calligraphy-ink.png",
+    "role": "three-dimensional living ink entrance"
+  },
+  "works": [
+    { "id": "01", "original": "originals/work-01.jpg", "asset": "characters/daruma-prayer.png", "scene": "prayer" },
+    { "id": "02", "original": "originals/work-02.jpg", "asset": "characters/daruma-seated-red.png", "scene": "seated-red" },
+    { "id": "03", "original": "originals/work-03.jpg", "asset": "characters/maitreya-lotus-v2.png", "scene": "maitreya-lotus" },
+    { "id": "04", "original": "originals/work-04.jpg", "asset": "characters/daruma-ensō.png", "scene": "enso-portrait" },
+    { "id": "05", "original": "originals/work-05.jpg", "asset": "characters/daruma-back.png", "scene": "seated-back" },
+    { "id": "06", "original": "originals/work-06.jpg", "asset": "characters/daruma-halo-v2.png", "scene": "mountain-halo" },
+    { "id": "07", "original": "originals/work-07.jpg", "asset": "characters/daruma-incense-v2.png", "scene": "incense-contemplation" },
+    { "id": "08", "original": "originals/work-08.jpg", "asset": "characters/daruma-gaze-v2.png", "scene": "gaze" },
+    { "id": "09", "original": "originals/work-09.jpg", "asset": "characters/daruma-scroll.png", "scene": "vertical-scroll" }
+  ]
+}

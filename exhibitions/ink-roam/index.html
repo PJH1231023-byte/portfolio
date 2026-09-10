@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#fefefc" />
+    <meta name="description" content="由真实书法墨迹与达摩绘画构成的沉浸式数字艺术展。" />
+    <title>墨游 · 达摩数字艺术展</title>
+    <script>
+      document.documentElement.classList.add('js');
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      addEventListener('pageshow', () => scrollTo(0, 0));
+      addEventListener('load', () => scrollTo(0, 0));
+    </script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <a class="portfolio-return" href="../../portfolio-entry-preview.html#opening" aria-label="返回黄佩嘉作品集" title="返回作品集"><span aria-hidden="true">×</span></a>
+    <svg class="ink-filter-defs" aria-hidden="true" width="0" height="0">
+      <defs>
+        <filter id="wet-ink-near" x="-18%" y="-26%" width="136%" height="152%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.012 0.028" numOctaves="2" seed="23" result="noise" />
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="42" />
+        </filter>
+        <filter id="wet-ink-far" x="-20%" y="-28%" width="140%" height="156%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.009 0.021" numOctaves="3" seed="41" result="noise" />
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="54" />
+        </filter>
+      </defs>
+    </svg>
+    <div class="paper-field" aria-hidden="true">
+      <i class="ink-wash ink-wash--near"></i>
+      <i class="ink-wash ink-wash--far"></i>
+      <i class="paper-grain"></i>
+    </div>
+    <canvas id="ink-canvas" aria-hidden="true"></canvas>
+    <canvas id="gesture-canvas" aria-hidden="true"></canvas>
+
+    <div class="ink-cursor" aria-hidden="true"><span></span></div>
+
+    <section class="threshold" aria-label="进入达摩数字艺术展" tabindex="0">
+      <canvas id="opening-ink-canvas" aria-hidden="true"></canvas>
+      <img class="threshold-ink" src="./assets/calligraphy/calligraphy-ink.png" alt="" />
+      <i class="opening-seal" aria-hidden="true"></i>
+      <div class="gesture-guide" aria-hidden="true">
+        <i class="guide-orbit"></i>
+        <i class="guide-point"></i>
+        <i class="guide-wave guide-wave--one"></i>
+        <i class="guide-wave guide-wave--two"></i>
+      </div>
+    </section>
+
+    <header class="museum-tools" aria-label="展览控制">
+      <button class="seal-control sound-control" type="button" aria-label="关闭环境声音" aria-pressed="true">
+        <i></i><i></i><i></i>
+      </button>
+      <button class="seal-control guide-control" type="button" aria-label="重新播放无文字导览">
+        <i></i><i></i><i></i>
+      </button>
+    </header>
+
+    <main class="museum" aria-label="达摩数字艺术展">
+      <section class="passage passage--opening" aria-label="墨境入口" data-passage="0">
+        <div class="opening-space" aria-hidden="true"></div>
+      </section>
+
+      <section class="passage passage--prayer" aria-label="合掌达摩" data-passage="1">
+        <div class="passage-sticky">
+          <span class="aura aura--smoke" aria-hidden="true"></span>
+          <button class="spirit spirit--prayer" type="button" data-original="./assets/originals/work-01.jpg" aria-label="观看合掌达摩完整原作">
+            <img src="./assets/characters/daruma-prayer.png" alt="合掌达摩" />
+          </button>
+        </div>
+      </section>
+
+      <section class="passage passage--seated" aria-label="树下静坐达摩" data-passage="2">
+        <div class="passage-sticky">
+          <span class="aura aura--enso" aria-hidden="true"></span>
+          <button class="spirit spirit--seated" type="button" data-original="./assets/originals/work-02.jpg" aria-label="观看树下静坐达摩完整原作">
+            <img src="./assets/characters/daruma-seated-red.png" alt="树下静坐达摩" loading="lazy" />
+          </button>
+        </div>
+      </section>
+
+      <section class="passage passage--lotus" aria-label="持莲弥勒" data-passage="3">
+        <div class="passage-sticky">
+          <span class="aura aura--lotus" aria-hidden="true"></span>
+          <button class="spirit spirit--lotus" type="button" data-original="./assets/originals/work-03.jpg" aria-label="观看持莲弥勒完整原作">
+            <img src="./assets/characters/maitreya-lotus-v2.png" alt="持莲弥勒" loading="lazy" />
+          </button>
+        </div>
+      </section>
+
+      <section class="passage passage--enso" aria-label="圆相达摩" data-passage="4">
+        <div class="passage-sticky">
+          <span class="aura aura--wash" aria-hidden="true"></span>
+          <button class="spirit spirit--enso" type="button" data-original="./assets/originals/work-04.jpg" aria-label="观看圆相达摩完整原作">
+            <img src="./assets/characters/daruma-ensō.png" alt="圆相达摩" loading="lazy" />
+          </button>
+        </div>
+      </section>
+
+      <section class="passage passage--back" aria-label="背影坐禅" data-passage="5">
+        <div class="passage-sticky">
+          <span class="aura aura--ring" aria-hidden="true"></span>
+          <button class="spirit spirit--back" type="button" data-original="./assets/originals/work-05.jpg" aria-label="观看背影坐禅完整原作">
+            <img src="./assets/characters/daruma-back.png" alt="背影坐禅" loading="lazy" />
+          </button>
+        </div>
+      </section>
+
+      <section class="passage passage--halo" aria-label="山中达摩" data-passage="6">
+        <div class="passage-sticky">
+          <span class="aura aura--halo" aria-hidden="true"></span>
+          <button class="spirit spirit--halo" type="button" data-original="./assets/originals/work-06.jpg" aria-label="观看山中达摩完整原作">
+            <img src="./assets/characters/daruma-halo-v2.png" alt="山中达摩" loading="lazy" />
+          </button>
+        </div>
+      </section>
+
+      <section class="passage passage--incense" aria-label="香前观心" data-passage="7">
+        <div class="passage-sticky">
+          <span class="aura aura--mountain" aria-hidden="true"></span>
+          <button class="spirit spirit--incense" type="button" data-original="./assets/originals/work-07.jpg" aria-label="观看香前观心完整原作">
+            <img src="./assets/characters/daruma-incense-v2.png" alt="香前观心" loading="lazy" />
+          </button>
+        </div>
+      </section>
+
+      <section class="passage passage--gaze" aria-label="回眸达摩" data-passage="8">
+        <div class="passage-sticky">
+          <span class="aura aura--gaze" aria-hidden="true"></span>
+          <button class="spirit spirit--gaze" type="button" data-original="./assets/originals/work-08.jpg" aria-label="观看回眸达摩完整原作">
+            <img src="./assets/characters/daruma-gaze-v2.png" alt="回眸达摩" loading="lazy" />
+          </button>
+        </div>
+      </section>
+
+      <section class="passage passage--scroll" aria-label="一笔达摩" data-passage="9">
+        <div class="passage-sticky">
+          <span class="aura aura--scroll" aria-hidden="true"></span>
+          <button class="spirit spirit--scroll" type="button" data-original="./assets/originals/work-09.jpg" aria-label="观看一笔达摩完整原作">
+            <img src="./assets/characters/daruma-scroll.png" alt="一笔达摩" loading="lazy" />
+          </button>
+        </div>
+      </section>
+
+      <section class="passage passage--release" aria-label="展览尾厅：前往达摩行走世界" data-passage="10">
+        <button class="passage-sticky release-mark" type="button" aria-label="点击进入下一空间：达摩行走世界">
+          <span class="release-horizon" aria-hidden="true">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          </span>
+          <span class="release-copy">
+            <small>展览未完 · 彼岸仍有众相</small>
+            <strong>前往新世界</strong>
+            <em>点击进入 · 探索行走中的达摩</em>
+          </span>
+          <span class="release-step" aria-hidden="true"><b></b><b></b><b></b></span>
+        </button>
+      </section>
+    </main>
+
+    <nav class="passage-index" aria-label="作品场景索引"></nav>
+
+    <dialog class="art-dialog" aria-label="完整原作">
+      <button class="dialog-close" type="button" aria-label="返回数字展厅"></button>
+      <div class="art-paper"><img alt="" /></div>
+    </dialog>
+
+    <script src="./vendor/three.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

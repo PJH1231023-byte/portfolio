@@ -127,6 +127,7 @@ function createWindow(id,title,html){const old=$('[data-window="'+id+'"]');if(ol
 function openFolder(id){const definition=folderDefinitions.find(d=>d[0]===id);if(!definition)return;if(id==='tarot'){openTarot();return;}if(id==='about'){openAbout();return;}const filtered=ids.filter(key=>M.type(works[key])===id);const entries=filtered.map(key=>'<button class="file-item" type="button" data-project="'+key+'"><img src="'+validImage(covers[key]||works[key].cover)+'" alt="" loading="lazy"><span>'+escape(works[key].title)+'</span></button>').join('');const count=filtered.length;createWindow(id,definition[1]+' / '+count+' 项','<p class="folder-direction-note">'+escape(folderGuides[id]||'')+'</p><div class="window-items">'+entries+'</div>');$('#desktop-status').textContent=definition[1]+' / '+count+' 项';}
 function openAbout(){
  const projects=[
+  {id:'three-realms',label:'策展项目 · 数字艺术展',text:'从艺术史与水墨作品出发，我把三个独立网页连接成一条连续的观展路线：从原作和局部笔墨进入无文字墨境，再走进可以自由探索的山水空间。这个项目也让我把策展思考、视觉设计、空间叙事与互动编程放在同一个体验里。'},
   {id:'gourd-museum',label:'合作项目 · 数字展陈',text:'朋友收藏了许多葫芦，也是一位手艺人。这个项目把手机照片经自动抠图变成伪 3D 展品，再放进书架、桌柜和地面自由策展。我参与展陈、作品上架和家具皮肤设计，让真实的收藏有一个新的展示空间。'},
   {id:'project-management',label:'个人系统 · 项目与任务',text:'创作时，想法、资料和待办很容易散落在不同地方。我把它们组织进一个工作台，让每个项目的进展和下一步更清楚。'},
   {id:'digital-library',label:'个人系统 · 阅读与知识',text:'把书籍、阅读笔记和学习资源放在同一个知识空间里，尝试让收藏下来的内容更容易被找回，也更容易用于下一次创作。'},
@@ -139,15 +140,15 @@ function openAbout(){
   <div class="desktop-about profile-archive">
    <aside class="profile-portrait"><img src="images/avatar-home-shoes-cutout.png" alt="黄佩嘉人物形象"><p>黄佩嘉<small>PEIJIA HUANG</small></p><button class="profile-contact" type="button" data-contact aria-haspopup="dialog">联系我 ↗</button></aside>
    <div class="profile-text">
-    <p class="profile-kicker">ABOUT ME / DESIGN & EXPLORATION</p>
-    <h3>你好，我是佩嘉。</h3>
+    <p class="profile-kicker">ABOUT ME / CURIOSITY INTO EXPERIENCE</p>
+    <h3>你好，我是佩嘉。<span class="profile-headline-note">我喜欢把好奇心，做成看得见、也可以亲自进入的体验。</span></h3>
     <p class="profile-education-line">多伦多大学 · 艺术与艺术史专业 · 已毕业</p>
-    <p class="profile-intro">我做品牌视觉、角色、字体与影像，也喜欢把想法继续往前推一步，做成可以使用的工具、可以亲自游玩的游戏。在这些看起来不同的作品里，我一直在关心相似的事情：一个形象为什么让人记住，一种颜色和材质能带来什么感受，一个界面又怎样让人愿意继续探索。</p>
-    <p class="profile-intro">我偏爱有性格、也有一点小情绪的角色，希望它们让人产生亲近感，甚至在某个时刻带来陪伴。我喜欢软陶和毛绒的柔软，也着迷于珠宝、玻璃的光泽；印象派的光色、版画的纹理，以及自然形态和传统文化里的意象，都会成为我的视觉线索。我会反复尝试它们怎样出现在同一个画面里，形成自己的表达。</p>
-    <p class="profile-intro">很多作品都从身边的事情开始：想把日常的资料整理得更顺手，或是为朋友的手作找到合适的展示方式。我也借助 AI 生成工具与辅助编程，把原本停留在草图里的想法做出来，再通过筛选、调整和实际体验继续打磨。我希望作品有自己的审美和情绪，也能让使用它的人感到顺手、愿意停留。</p>
+    <p class="profile-intro">我的背景是艺术与艺术史，所以我习惯先观察：一个形象为什么会被记住，一种颜色和材质怎样改变情绪，一个空间又如何引导人停留。后来，这些观察慢慢从品牌、角色和影像走向了数字策展、互动产品与小游戏。我不太愿意让想法只停在一张漂亮的图上，更想继续问一句：它能不能被进入、被操作，或者真的帮人解决一点问题？</p>
+    <p class="profile-intro">我经常从一个很具体的感受开始做项目：资料太散了，就做一个工作台；朋友的收藏缺少展示空间，就一起搭一座数字博物馆；看画不一定只能按顺序翻页，于是把三座水墨网页连成一次可以游走的观展旅程。视觉设计帮我找到作品的语气，AI 与辅助编程则让我更快地把草图变成可体验的原型，再从真正使用时的不顺手里继续修改。</p>
+    <p class="profile-intro">我在意作品有没有自己的性格，也在意别人第一次接触时能不能自然地看懂。合作时，我喜欢把模糊的想法整理成画面、流程和可以一起讨论的版本；面对还没有答案的问题，我通常会先做一个小而具体的尝试，让讨论从“也许可以”变成“我们来看看它实际是什么感觉”。</p>
     <section class="profile-section" aria-labelledby="profile-projects">
-     <h4 id="profile-projects">从日常与合作中长出来的项目</h4>
-     <p class="profile-section-intro">这些实践把我的视觉兴趣带到了具体的使用场景中。下面保留项目图片与设计说明，完成了互动样例的作品也可以直接体验。</p>
+     <h4 id="profile-projects">从日常、合作与好奇心中长出来的项目</h4>
+     <p class="profile-section-intro">它们的起点不完全一样：有的是一次合作，有的是自己的真实需求，也有的是对艺术、图像与互动方式的持续好奇。点击图片可以继续查看每个项目如何从想法变成体验。</p>
      <div class="profile-project-grid">
       ${projects.map(item=>{const w=works[item.id];return `<article class="profile-project-card" id="profile-${item.id}">
        <button type="button" class="profile-card-image" data-project="${item.id}" aria-label="查看${escape(w.title)}"><img src="${validImage(w.cover||w.gallery?.[0]?.src)}" alt="${escape(w.title)}项目界面" loading="lazy"></button>
@@ -157,12 +158,12 @@ function openAbout(){
      </div>
      <aside class="profile-context-note"><h5>还有一些小工具，藏在日常使用里</h5><p>我也做过 BOSS 直聘智能岗位筛选工具。这是一款浏览器插件，用于辅助整理筛选条件、进行岗位初筛。它和这些个人系统一样，都来自一个很具体的想法：让重复的信息处理少一点，让时间留给更值得投入的事情。</p></aside>
     </section>
-    <p class="profile-footer">还在尝试，也还在慢慢找到自己的表达。谢谢你来看看我的作品。</p>
+    <p class="profile-footer">我还在继续尝试，也愿意让每一次合作为作品带来新的方向。谢谢你来到这里，认识我正在做的这些事情。</p>
    </div>
   </div>`);
 }
 $('[data-home-folders]').addEventListener('click',()=>{WorkShowcase.pause($('#desktop-windows'));$('#desktop-windows').innerHTML='';$('#desktop-status').textContent='READY / 作品档案';});
-function projectLinks(id){const w=works[id],video=(w.list||[]).find(s=>s.startsWith('视频链接：'))?.match(/https:\/\/[^\s]+/)?.[0];let links=video?'<a href="'+escape(video)+'" target="_blank" rel="noopener">观看完整影片 ↗</a>':'';if(id==='word-of-plants')links+='<button type="button" data-tarot>抽一张植物牌 ↗</button>';if(id==='cattea'||id==='woola')links+='<a href="brand-experience.html#'+id+'">探索品牌空间 ↗</a>';if(w.overviewEmbed)links+='<button type="button" data-overview="'+id+'">'+escape(w.overviewLabel||'观看项目简介 ↗')+'</button>';if(w.interactiveEmbed)links+='<a href="'+escape(w.interactiveEmbed.split('?')[0])+'" data-experience="'+id+'">'+escape(w.interactiveLabel||'体验原型 ↗')+'</a>';if(w.gameEmbed)links+='<button type="button" data-game="'+id+'">开始游戏 ↗</button>';return links;}
+function projectLinks(id){const w=works[id],video=(w.list||[]).find(s=>s.startsWith('视频链接：'))?.match(/https:\/\/[^\s]+/)?.[0];let links=video?'<a href="'+escape(video)+'" target="_blank" rel="noopener">观看完整影片 ↗</a>':'';if(id==='word-of-plants')links+='<button type="button" data-tarot>抽一张植物牌 ↗</button>';if(id==='cattea'||id==='woola')links+='<a href="brand-experience.html#'+id+'">探索品牌空间 ↗</a>';if(w.overviewEmbed)links+='<button type="button" data-overview="'+id+'">'+escape(w.overviewLabel||'观看项目简介 ↗')+'</button>';if(w.interactiveEmbed)links+=id==='three-realms'?'<a href="'+escape(w.interactiveEmbed.split('?')[0])+'" target="_blank" rel="noopener">'+escape(w.interactiveLabel||'打开策展全览 ↗')+'</a>':'<a href="'+escape(w.interactiveEmbed.split('?')[0])+'" data-experience="'+id+'">'+escape(w.interactiveLabel||'体验原型 ↗')+'</a>';if(w.gameEmbed)links+='<button type="button" data-game="'+id+'">开始游戏 ↗</button>';return links;}
 function openProject(id){if(!Object.hasOwn(works,id)||id==='more')return;WorkShowcase.pause(projectDialog);clearTimeout(drawTimer);drawing=false;activeProject=id;projectIndex=0;const w=works[id];projectGallery=(w.gallery||[]).filter(x=>validImage(x.src));if(!projectGallery.length&&validImage(w.cover))projectGallery=[{src:w.cover,caption:w.title}];$('#project-type').textContent=w.cat;$('#project-content').innerHTML='<div class="project-content-inner"><h2 id="project-title">'+escape(w.title)+'</h2><div class="project-view"><div class="project-image"><img id="gallery-image" src="'+(projectGallery[0]?.src||validImage(w.cover))+'" alt="'+escape(projectGallery[0]?.caption||w.title)+'"><nav aria-label="作品图片"><button type="button" data-gallery="-1" aria-label="上一张图片">←</button><span id="gallery-position"></span><button type="button" data-gallery="1" aria-label="下一张图片">→</button></nav><p id="gallery-caption" class="gallery-caption" aria-live="polite"></p><div class="project-links"><a id="full-image" href="'+(projectGallery[0]?.src||validImage(w.cover))+'" target="_blank" rel="noopener">打开原图 ↗</a></div></div><div class="project-notes"><p>'+escape(w.desc)+'</p><ul>'+(w.list||[]).filter(s=>!s.startsWith('视频链接：')).map(s=>'<li>'+escape(s)+'</li>').join('')+'</ul><div class="project-links">'+projectLinks(id)+'</div></div></div>'+WorkShowcase.render(w)+'</div>';updateGallery();if(!projectDialog.open)projectDialog.showModal();syncModal();}
 function updateGallery(){if(!projectGallery.length)return;const item=projectGallery[projectIndex];$('#gallery-image').src=item.src;$('#gallery-image').alt=item.caption||works[activeProject].title;$('#gallery-position').textContent=String(projectIndex+1).padStart(2,'0')+' / '+String(projectGallery.length).padStart(2,'0');$('#full-image').href=item.src;$('#gallery-caption').textContent=item.caption||works[activeProject].title;$$('[data-gallery]').forEach(b=>b.disabled=projectGallery.length<2);}
 function openTarot(){clearTimeout(drawTimer);drawing=false;deck=PlantTarot.shuffle();$('#project-type').textContent='THE WORD OF PLANTS / 植物神谕';$('#project-content').innerHTML='<section class="tarot-experience"><p class="kicker">A QUESTION, A LEAF, A MOMENT</p><h2 id="project-title">植物之语</h2><p id="tarot-status" role="status">心里留一个问题，选一张植物牌。</p><div class="tarot-choice-grid">'+deck.map((_,i)=>'<button class="tarot-card-back" type="button" data-tarot-card="'+i+'" aria-label="选择第'+(i+1)+'张牌"><span>✧</span><small>'+String(i+1).padStart(2,'0')+'</small></button>').join('')+'</div><div id="tarot-reading" hidden></div><p class="tarot-note">十二张植物牌 · 单张正位 · 借植物的象征，与自己对话</p><button type="button" class="line-link" data-project="word-of-plants">看看这套卡牌的设计 ↗</button></section>';if(!projectDialog.open)projectDialog.showModal();syncModal();}

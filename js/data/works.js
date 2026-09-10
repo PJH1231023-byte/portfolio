@@ -470,6 +470,32 @@ var workDetails = {
       { src: 'images/wangcaicai-01-husky.jpg', caption: '角色延展 · 三视图 + 表情 + 6 场景 + 周边', wide: true }
     ]
   },
+  'three-realms': {
+    cat: 'CODE · 数字策展',
+    format: 'exhibit',
+    sections: ['product', 'play'],
+    title: '三境相连 · 水墨数字艺术展',
+    cover: 'images/curation/between-forms.png',
+    summary: '把三座独立网页展览连接成一条完整观展路线，让原作阅读、无文字墨境与自由山水探索依次发生。',
+    desc: '《三境相连》是一组由三个独立网页组成的互动数字策展项目。《无形之境》从五件水墨原作与局部笔墨出发；《墨游 · 达摩》把书法、人物与滚动手势转化为无文字的沉浸空间；《众相之间》让观者在青绿山水中自由移动、靠近人物并回到原作。三个网站通过观展顺序、声音状态与离境入口连接，网页本身不再只是作品容器，而成为观看发生的空间。',
+    list: [
+      '角色：概念策划 / 数字策展 / 视觉设计 / 交互设计 / AI-assisted Coding',
+      '观展路线：无形之境 → 墨游 · 达摩 → 众相之间 → 离境返回',
+      '交互：滚动叙事 / 鼠标视差 / 局部探索 / 原作缩放 / 自由镜头 / 声音状态延续',
+      '技术：React / JavaScript / Canvas / WebGL / Three.js / Vinext',
+      '状态：三站本地互动原型；作品集提供完整策展入口与项目说明，不虚构公开上线数据'
+    ],
+    gallery: [
+      { src: 'images/curation/formless-realm.jpg', caption: '第一境 · 无形之境：从原作与局部笔墨进入观看', wide: false },
+      { src: 'images/curation/ink-roam-scene.jpg', caption: '第二境 · 墨游：绘画人物与墨迹成为无文字的空间入口', wide: true },
+      { src: 'images/curation/between-forms.png', caption: '第三境 · 众相之间：在青绿山水中自由探索人物与作品', wide: true }
+    ],
+    interactiveEmbed: 'curation.html',
+    interactiveLabel: '打开策展全览 ↗',
+    interactiveType: '互动网页 / 三境导览',
+    interactiveWide: true,
+    interactiveTitle: '三境相连 · 水墨数字艺术展'
+  },
   'more': {
     cat: 'COMING SOON',
     title: '更多作品即将上架',

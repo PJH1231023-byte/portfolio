@@ -124,6 +124,7 @@ html:has(body.reduce-motion){scroll-behavior:auto}body.reduce-motion *{animation
 @media(max-width:650px){.profile-portrait>.profile-contact{font-size:14px;text-align:left}.contact-card{padding:24px 22px}.contact-card h2{font-size:30px}.contact-email-row{flex-direction:column;gap:12px}.contact-email-row>input{font-size:17px}.contact-card .contact-copy-status{min-height:3.8em}}
 .profile-text{min-width:0;overflow-wrap:anywhere}
 .desktop-about .profile-kicker{font-size:12px;letter-spacing:.12em;color:#5a6455}
+.desktop-about .profile-headline-note{display:block;max-width:28em;margin-top:9px;font-size:clamp(17px,1.55vw,23px);font-weight:400;line-height:1.55;letter-spacing:.015em;color:#596454}
 .desktop-about .profile-intro{font-size:15px;line-height:1.95;margin:10px 0 22px}
 .profile-section{padding:20px 0;border-top:1px solid #68726040}
 .profile-section h4{font-size:15px;letter-spacing:.12em;font-weight:600;margin:0 0 16px;color:#44513e}

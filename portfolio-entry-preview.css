@@ -2,6 +2,11 @@
 .entry-preview{--entry-sage:#cbd4ba;--entry-screen:#adbaad;--entry-ink:#283d35}
 .entry-preview .header-center{letter-spacing:.12em;font-size:13px}
 .entry-preview .header-center span{font:11px var(--roman);letter-spacing:.12em;color:var(--gold);margin-left:9px}
+.entry-preview .header-center-nav{display:flex;align-items:center;gap:21px;white-space:nowrap}
+.entry-preview .header-center-nav>a{transition:color .2s,opacity .2s}
+.entry-preview .header-center-nav>a+a{padding-left:21px;border-left:1px solid #cbb78d45}
+.entry-preview .header-center-nav>a:hover,.entry-preview .header-center-nav>a:focus-visible{color:#fff6df}
+@media(max-width:1050px){.entry-preview .header-center-nav{display:none}}
 .entry-preview .chapter-nav{transition:opacity .2s}
 .entry-preview.entry-is-visible .chapter-nav{visibility:hidden;opacity:0;pointer-events:none}
 .entry-chapter{height:auto;min-height:100svh;scroll-margin-top:0}

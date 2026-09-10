@@ -40,7 +40,7 @@
     }
   }
   definitions.forEach(definition => {
-    const ids = fileIds.filter(id => M.type(catalogue[id]) === definition.id);
+    const ids = fileIds.filter(id => M.type(catalogue[id]) === definition.id || (catalogue[id].sections || []).includes(definition.id));
     const picks = [...new Set([...definition.picks.filter(id => ids.includes(id)), ...ids])].slice(0,2);
     const images = picks.map(id => {
       const src = exhibition.covers[id] || catalogue[id].cover;
