@@ -7,7 +7,7 @@
 
   const css = document.createElement('link');
   css.rel = 'stylesheet';
-  css.href = 'v4.css?v=4.14';
+  css.href = 'v4.css?v=4.15';
   document.head.appendChild(css);
 
   const META_KEY = 'portfolio.spirit-roam.progress.v4';
