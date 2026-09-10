@@ -271,7 +271,7 @@ var workDetails = {
       { src: 'images/little-picnic-club-food-preview.png', caption: '点心野餐会 · 游戏实机界面', wide: true }
     ],
     gameHint: '动物与点心自由选择，各自闯关 · 按住瞄准、松手发射，三个同伴合成 · Esc 暂停并返回展台',
-    gameEmbed: 'games/starling-merge/index.html?v=20260910-wide-stage2'
+    gameEmbed: 'games/starling-merge/index.html?v=20260910-frame-fill3'
   },
   'snake-game': {
     cat: 'CODE · 互动小游戏',
@@ -287,7 +287,7 @@ var workDetails = {
       '开发：AI 辅助开发（Vibe Coding）'
     ],
     gallery: [],
-    gameEmbed: 'snake-game.html'
+    gameEmbed: 'snake-game.html?v=20260910-frame-fill'
   },
   'pet-garden-battle': {
     cat: 'CODE · 互动小游戏',
@@ -306,7 +306,7 @@ var workDetails = {
     ],
     gallery: [{ src: 'images/dream-guardians-cover.png', caption: '浮光守卫 · 梦境花庭世界观概念图，非实机截图', wide: true }],
     gameHint: '河岸加号部署 · 金币工坊自动生产 · 怪物连续入场 · 空格暂停 · 十关自由挑战',
-    gameEmbed: 'games/dream-guardians/index.html?v=2.3'
+    gameEmbed: 'games/dream-guardians/index.html?v=2.4-frame-fill'
   },
   'wild-geometry': {
     cat: 'TYPE · 字体设计',

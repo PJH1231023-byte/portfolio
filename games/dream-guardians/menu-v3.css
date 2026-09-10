@@ -105,3 +105,18 @@ body.game-home{background:#163d3d;color:#fff4d6;overflow-x:hidden;min-height:100
 @media(max-width:370px){.game-home .masthead{padding-left:12px;padding-right:12px}.game-home .brand img{display:none}.game-home .wallet>span{padding:7px 6px}.game-menu{padding-left:14px;padding-right:14px}.gm-title{font-size:56px}.gm-play-links button>span{font-size:7px;margin-left:4px}.gm-dock-label small{font-size:7px}.gm-utility{letter-spacing:0}}
 @media(min-width:761px) and (max-height:740px){.game-menu{padding-top:85px}.gm-world{min-height:370px;padding-bottom:6px}.gm-title{font-size:83px}.gm-eyebrow{margin-bottom:10px}.gm-title{margin-bottom:14px}.gm-play{margin-top:20px}.gm-cast{min-height:365px}.gm-guardian--0{height:280px}.gm-guardian--1{height:335px}.gm-guardian--2{height:305px}.gm-dock{margin-top:12px}.gm-dock-item{min-height:68px}.gm-dock-art{width:58px;height:58px}.gm-utility{margin-top:10px}}
 @media(prefers-reduced-motion:reduce){.game-menu *,.game-menu *::before,.game-menu *::after{animation:none!important;transition:none!important}.gm-motes{display:none}.gm-backdrop{transform:none}}
+
+/* Embedded theatre: keep the painted world behind the full portfolio frame. */
+html:has(body.game-home),
+body.game-home,
+body.game-home #view,
+body.game-home .game-menu {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  background-color: #163d3d;
+}
+
+body.game-home {
+  overflow: hidden;
+}

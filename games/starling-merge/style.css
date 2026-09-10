@@ -209,3 +209,23 @@ html[data-embedded=true] .game-room{width:min(480px,calc((100svh - 20px)*.615384
   }
 }
 
+/* Embedded theatre: cover the complete portfolio frame at every stage. */
+html[data-embedded="true"],
+html[data-embedded="true"] body {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  background: #f3efe4;
+}
+
+html[data-embedded="true"] body {
+  overflow: hidden;
+}
+
+html[data-embedded="true"] #title-screen,
+html[data-embedded="true"] #play-screen.picnic-layout {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+}
+
