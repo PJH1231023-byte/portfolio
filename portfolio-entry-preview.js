@@ -77,7 +77,7 @@
   const observer = new IntersectionObserver(entries => {
     const visible = entries[0].isIntersecting;
     document.body.classList.toggle('entry-is-visible', visible);
-    nav.inert = visible;
+    nav.toggleAttribute('aria-hidden', visible);
   }, {rootMargin:'-88px 0px 0px 0px'});
   observer.observe(intro);
   const monitor = document.querySelector('.entry-monitor');

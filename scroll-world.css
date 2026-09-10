@@ -8,6 +8,20 @@ dialog::backdrop{background:#050810cb;backdrop-filter:blur(10px)}.desktop-modal{
 body.reduce-motion .scroll-chapter{height:auto;min-height:100svh}body.reduce-motion .scene{position:relative}body.reduce-motion .opening-verse{display:none}body.reduce-motion .opening-title{opacity:1;transform:none}body.reduce-motion .scene,body.reduce-motion .atlas-paint,body.reduce-motion .archive-disc,body.reduce-motion .desktop-mini-disc{animation:none!important;transition:none!important}body.reduce-motion .celestial-machine{transform:translateX(-50%)}body.reduce-motion .orbit-words{top:12%}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation-duration:.01ms!important;transition-duration:.01ms!important;animation-iteration-count:1!important}}
 html:has(body.reduce-motion){scroll-behavior:auto}body.reduce-motion *{animation:none!important;transition:none!important}
+
+/* Cross-browser layout guards: keep visible controls inside their hit areas and
+   prevent auto-sized archive windows from collapsing while images are loading. */
+@media(min-width:651px){
+  .chapter-nav{width:150px;pointer-events:auto}
+  .chapter-nav a{width:100%;justify-content:flex-end}
+  .desktop-window:not(.about-window){height:min(420px,83%);min-height:290px}
+}
+.desktop-window>.window-content{flex:1 1 auto;min-height:0}
+@media(max-width:650px){
+  .chapter-nav{width:44px}
+  .chapter-nav a{width:44px;justify-content:flex-end}
+  .desktop-window:not(.about-window){min-height:min(360px,80%)}
+}
 @media(max-height:650px) and (min-width:651px){.scene{min-height:580px}.scene-heading{padding-top:95px}.atlas-accordion{min-height:230px;height:40vh;margin-top:20px}.atlas-foot{margin-top:12px}.opening-title{top:23%}.opening-title h1{font-size:clamp(60px,8vw,110px);margin:15px 0}.archive-copy h2{font-size:45px}.archive-open{margin-top:15px;padding:12px 0}.orbit-words h2{font-size:36px;margin:12px 0}}
 
 /* A distinct exhibition form for each catalogue category. */
