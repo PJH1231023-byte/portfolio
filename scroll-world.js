@@ -75,6 +75,20 @@ addEventListener('scroll',()=>{if(!scrollQueued){scrollQueued=true;requestAnimat
 addEventListener('resize',updateScroll);
 $('#motion-toggle').addEventListener('click',()=>{reduce=!reduce;document.body.classList.toggle('reduce-motion',reduce);$('#motion-toggle').setAttribute('aria-pressed',String(reduce));$('#motion-toggle').textContent=reduce?'恢复动态':'减少动态';updateScroll();if(!reduce)startCosmos();else{cancelAnimationFrame(cosmosFrame);cosmosFrame=0;trail=[];paintCosmos(0);}});
 setArcadeMeta(activeArcadeGame);
+const arcadeFullscreen=$('#arcade-fullscreen');
+if(arcadeFullscreen){
+ arcadeFullscreen.hidden=!document.fullscreenEnabled;
+ arcadeFullscreen.addEventListener('click',()=>{
+  const reveal=$('#arcade-reveal');
+  const action=document.fullscreenElement?document.exitFullscreen?.():reveal?.requestFullscreen?.();
+  action?.catch?.(()=>{$('#arcade-hint').textContent='当前浏览器暂时无法进入全屏，可以继续在展台内游玩。';});
+ });
+ addEventListener('fullscreenchange',()=>{
+  const active=document.fullscreenElement===$('#arcade-reveal');
+  arcadeFullscreen.setAttribute('aria-pressed',String(active));
+  arcadeFullscreen.textContent=active?'退出全屏 ↙':'全屏游玩 ↗';
+ });
+}
 $('#light-switch').addEventListener('click',()=>{const lit=$('#light-stage').dataset.lit!=='true';$('#light-stage').dataset.lit=String(lit);$('#light-switch').setAttribute('aria-checked',String(lit));$('#light-state').textContent=lit?'游戏已唤醒 · 再点可关灯':'点击开关 · 唤醒游戏';$('#arcade-reveal').inert=!lit;if(lit)mountArcade();else pauseGame();});
 $('#disc-toggle').addEventListener('click',()=>{const paused=$('#disc-toggle').getAttribute('aria-pressed')==='true';$('#disc-toggle').setAttribute('aria-pressed',String(!paused));$('#disc-toggle').setAttribute('aria-label',paused?'开始光盘转动':'暂停光盘转动');$('#disc-toggle').style.animationPlayState=paused?'paused':'running';});
 const canvas=$('#cosmos'),ctx=canvas.getContext('2d');let w=innerWidth,h=innerHeight,cosmosFrame=0,lastTime=0,trail=[];
