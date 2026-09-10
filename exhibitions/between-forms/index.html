@@ -19,12 +19,87 @@
         background: #eee9db;
       }
 
-      .museum-app {
-        width: 100%;
-        height: 100%;
-        min-height: 100%;
-      }
-    </style>
+  .museum-app {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+  }
+
+  /*
+   * Production-safe portal positioning.
+   * The exhibition bundle uses utility classes for its Dialog and Sheet
+   * portals. Those positioning utilities can be omitted by the static build,
+   * which leaves open panels in normal document flow underneath the scene.
+   * Keep the critical overlay geometry explicit here so local preview and the
+   * deployed GitHub Pages build behave identically.
+   */
+  [data-slot="dialog-portal"],
+  [data-slot="sheet-portal"] {
+    position: fixed !important;
+    inset: 0 !important;
+    z-index: 10000 !important;
+    width: 100vw !important;
+    height: 100dvh !important;
+    pointer-events: none !important;
+  }
+
+  [data-slot="dialog-overlay"],
+  [data-slot="sheet-overlay"] {
+    display: block !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    pointer-events: auto !important;
+    background: rgba(24, 31, 26, 0.28) !important;
+    -webkit-backdrop-filter: blur(3px) !important;
+    backdrop-filter: blur(3px) !important;
+  }
+
+  .museum-dialog[data-slot="dialog-content"] {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    right: auto !important;
+    bottom: auto !important;
+    z-index: 1 !important;
+    width: min(760px, calc(100vw - 48px)) !important;
+    max-width: min(760px, calc(100vw - 48px)) !important;
+    max-height: calc(100dvh - 48px) !important;
+    margin: 0 !important;
+    overflow: auto !important;
+    pointer-events: auto !important;
+    transform: translate(-50%, -50%) !important;
+  }
+
+  .painting-reader[data-slot="sheet-content"] {
+    position: absolute !important;
+    inset: 0 0 0 auto !important;
+    z-index: 1 !important;
+    width: min(48vw, 760px) !important;
+    max-width: none !important;
+    height: 100dvh !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    pointer-events: auto !important;
+    transform: none !important;
+  }
+
+  @media (max-width: 760px) {
+    .museum-dialog[data-slot="dialog-content"] {
+      width: calc(100vw - 24px) !important;
+      max-width: calc(100vw - 24px) !important;
+      max-height: calc(100dvh - 24px) !important;
+    }
+
+    .painting-reader[data-slot="sheet-content"] {
+      width: 100vw !important;
+    }
+  }
+</style>
   </head>
   <body>
     <div id="root"></div>
