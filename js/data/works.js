@@ -9,22 +9,27 @@ var workDetails = {
     cat: 'UI · 数字展陈',
     format: 'exhibit',
     title: '葫芦数字博物馆',
-    cover: 'images/gourd-museum-display.jpg',
+    cover: 'images/gourd-museum-display-hd.png',
     summary: '从手机拍照、自动抠图到伪 3D 陈列，为真实葫芦收藏搭建可以自由布展的数字策展空间。',
-    desc: '朋友是一位葫芦手艺人，家中收藏了各式各样的葫芦。这个 MVP 让他用手机拍摄藏品，上传后自动分离背景，再把抠出的照片作为伪 3D 展品放进空间：书架、桌子、矮柜，甚至地面都可以陈列，还能一键打乱上架藏品、尝试新的布局。我参与数字展陈、葫芦上架与陈列，并设计不同的家具皮肤。这里保留原项目照片，以一段简短的策展演示介绍整个流程。',
+    desc: '朋友是一位葫芦手艺人，家中收藏了各式各样的葫芦。这个 MVP 让他用手机拍摄藏品，上传后自动分离背景，再把抠出的照片作为伪 3D 展品放进空间：书架、桌子、矮柜，甚至地面都可以陈列，还能一键打乱上架藏品、尝试新的布局。我参与数字展陈、葫芦上架与陈列，并设计不同的家具皮肤。这里以真实展柜照片为视觉原型，提供可以直接进入和自由布展的互动展厅。',
     list: [
       '参与内容：数字展示空间搭建 / 葫芦作品上架与陈列 / 家具皮肤设计',
       '原 MVP 流程：手机拍照上传 → 自动抠图 → 生成伪 3D 图片展品 → 空间策展',
       '拍摄要求：光线充足、主体清晰；背景可以杂乱，由系统分离葫芦轮廓',
       '策展方式：书架、桌面、矮柜和地面陈列；一键打乱上架藏品，并更换家具皮肤',
-      '本站展示：32 秒策展流程演示；照片、抠图及陈列采用示意素材，呈现原 MVP 的使用方式'
+      '本站展示：直接进入互动展厅；选择展位与葫芦、调整家具和墙面，并保存自己的陈列'
     ],
-    gallery: [{src: 'images/gourd-museum-display.jpg', caption: '原项目照片 · 葫芦作品与展柜陈列', wide: true}],
-    interactiveEmbed: 'apps/gourd-museum/demo.html?v=2',
-    interactiveLabel: '观看策展演示 ↗',
-    interactiveType: '数字策展 / 流程演示',
+    gallery: [{src: 'images/gourd-museum-display-hd.png', caption: '葫芦藏品与数字展柜陈列', wide: true}],
+    overviewEmbed: 'apps/gourd-museum/demo.html?v=2',
+    overviewLabel: '观看项目简介 ↗',
+    overviewType: '项目简介 / 策展流程',
+    overviewTitle: '葫芦数字博物馆 · 项目简介',
+    overviewWide: true,
+    interactiveEmbed: 'apps/gourd-museum/index.html?v=3',
+    interactiveLabel: '进入互动展厅 ↗',
+    interactiveType: '数字策展 / 互动展厅',
     interactiveWide: true,
-    interactiveTitle: '策展流程演示'
+    interactiveTitle: '葫芦数字博物馆 · 互动展厅'
   },
   'woola': {
     cat: 'BRAND · 品牌全案',
@@ -238,8 +243,8 @@ var workDetails = {
       { src: 'images/spirit-roam-gameplay.png', caption: '粉晶花园 · 多层花阶实机画面', wide: true }
     ],
     gameHint: '横屏游玩 · 方向键移动 / 空格二段跳 / 按住 J 连续攻击 / H 操作说明 / P 或 Esc 暂停',
-    gameEmbed: 'games/spirit-roam/index.html?v=3.3.1',
-    gameStandalone: 'games/spirit-roam/index.html?v=3.3.1',
+    gameEmbed: 'games/spirit-roam/index.html?v=4.10',
+    gameStandalone: 'games/spirit-roam/index.html?v=4.10',
     showcase: {
       src: 'media/spirit-friends.webm', poster: 'images/spirit-roam-cover.png',
       title: '精灵漫游 · 伙伴互动与动作展示',
@@ -266,7 +271,7 @@ var workDetails = {
       { src: 'images/little-picnic-club-food-preview.png', caption: '点心野餐会 · 游戏实机界面', wide: true }
     ],
     gameHint: '动物与点心自由选择，各自闯关 · 按住瞄准、松手发射，三个同伴合成 · Esc 暂停并返回展台',
-    gameEmbed: 'games/starling-merge/index.html?v=19c052aecfd2'
+    gameEmbed: 'games/starling-merge/index.html?v=20260910-wide-stage2'
   },
   'snake-game': {
     cat: 'CODE · 互动小游戏',
@@ -301,7 +306,7 @@ var workDetails = {
     ],
     gallery: [{ src: 'images/dream-guardians-cover.png', caption: '浮光守卫 · 梦境花庭世界观概念图，非实机截图', wide: true }],
     gameHint: '河岸加号部署 · 金币工坊自动生产 · 怪物连续入场 · 空格暂停 · 十关自由挑战',
-    gameEmbed: 'games/dream-guardians/index.html?v=2.2'
+    gameEmbed: 'games/dream-guardians/index.html?v=2.3'
   },
   'wild-geometry': {
     cat: 'TYPE · 字体设计',

@@ -1,6 +1,6 @@
 (function(root){'use strict';
  const CATALOG=[
-  {id:'honey',name:'金蜜葫芦',note:'双腹饱满 · 蜜金原色',color:'#cc9a48',shape:0,scale:.87},
+  {id:'honey',name:'展柜原型 · 蜜金葫芦',note:'取自真实展柜照片 · 饱满双腹 · 蜜金原色',color:'#d3a24f',shape:0,scale:.96,image:'../../images/gourd-prototype-honey.png'},
   {id:'long',name:'细颈葫芦',note:'细长颈部 · 暖棕光泽',color:'#aa6b31',shape:1,scale:1},
   {id:'ivory',name:'素白葫芦',note:'温润浅色 · 圆润双腹',color:'#e8d6a7',shape:0,scale:.8},
   {id:'jade',name:'青玉葫芦',note:'青绿色釉感 · 金色束腰',color:'#7f9e8a',shape:2,scale:.92},

@@ -6,7 +6,7 @@
  let state=loaded.state,selected=0,history=[],saved=loaded.restored,scene,camera,renderer,controls,raf=0,toastTimer,active=true;
  const groups=[],slotRoots=[],picking=[],cabinetMats=[],lights=[],frames=[];
  const surface=$('gallery'),skins=$('skins'),catalog=$('collection'),slots=$('slots');
- const gourdIcon=c=>`<svg viewBox="0 0 40 48" aria-hidden="true"><path d="M21 6q4-5 2-5" fill="none" stroke="#786d48" stroke-width="2"/><path d="M20 6c-10 0-12 12-5 17C1 29 8 45 20 45s19-16 5-22c7-5 5-17-5-17Z" fill="${c.color}" stroke="#6a543332"/><path d="M16 10q-5 5-1 10M13 28q-5 7 0 11" fill="none" stroke="#fff7c955" stroke-width="2.4" stroke-linecap="round"/></svg>`;
+ const gourdIcon=c=>c.image?`<img class="reference-gourd" src="${c.image}" alt="" loading="eager">`:`<svg viewBox="0 0 40 48" aria-hidden="true"><path d="M21 6q4-5 2-5" fill="none" stroke="#786d48" stroke-width="2"/><path d="M20 6c-10 0-12 12-5 17C1 29 8 45 20 45s19-16 5-22c7-5 5-17-5-17Z" fill="${c.color}" stroke="#6a543332"/><path d="M16 10q-5 5-1 10M13 28q-5 7 0 11" fill="none" stroke="#fff7c955" stroke-width="2.4" stroke-linecap="round"/></svg>`;
  skins.innerHTML=M.SKINS.map(s=>`<button data-skin="${s.id}" aria-pressed="false"><span class="wood-swatch" style="--wood:${s.color}"></span>${s.name}</button>`).join('');
  catalog.innerHTML=M.CATALOG.map(c=>`<button data-gourd="${c.id}" title="上架${c.name}" aria-label="上架${c.name}">${gourdIcon(c)}${c.name}</button>`).join('');
  function toast(message){$('toast').textContent=message;$('toast').classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').classList.remove('visible'),2200);}

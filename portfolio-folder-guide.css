@@ -1,0 +1,5 @@
+.entry-folder-name{white-space:normal;line-height:1.5;letter-spacing:.025em}
+.entry-folder-count{font-size:9px;white-space:normal;line-height:1.5}
+.desktop-folder>span:last-child{white-space:normal;line-height:1.6}
+.folder-direction-note{margin:0 0 15px;padding:0 0 13px;border-bottom:1px solid #a9b2a040;font-size:12px;line-height:1.9;color:inherit;opacity:.8}
+@media(max-width:650px){.entry-folder-name{font-size:10px;letter-spacing:0}.entry-folder-count{font-size:8px}.folder-direction-note{font-size:11px;margin-bottom:10px;padding-bottom:10px}}

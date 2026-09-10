@@ -40,3 +40,172 @@ html[data-embedded=true] .game-room{width:min(480px,calc((100svh - 20px)*.615384
 @media(max-height:650px) and (min-width:761px){.title-illustration{min-height:100svh;padding:24px 45px}.title-illustration h1{font-size:65px;margin-top:15px}.title-illustration h1>span{margin:12px 0}.title-friends{height:160px;max-width:430px}.title-friends>.spirit-art{max-width:170px}.title-note{font-size:11px}.title-menu{padding-top:18px;padding-bottom:18px}.title-nav{margin-bottom:20px}.title-menu h2{font-size:26px;margin:10px 0 15px}.title-themes button{min-height:64px;padding:7px 12px}.title-themes .spirit-art{width:50px;height:50px}.home-progress{margin:12px 0 7px;min-height:24px}.home-start{padding:12px 20px}.home-save-note{margin:13px 0}.home-exit{margin-top:5px}}
 @media(max-width:760px){.title-screen{grid-template-columns:1fr;background-position:center top;background-size:auto 100%}.title-illustration{min-height:300px;padding:22px 28px 0}.title-edition{font-size:9px;margin:0}.title-illustration h1{font-size:55px;margin:15px 0}.title-illustration h1>span{font-size:12px;margin:12px 0}.title-friends{position:absolute;right:12px;bottom:10px;width:55%;height:140px}.title-friends>.spirit-art{width:52%;max-width:130px}.friend-dog{left:29%}.friend-cake{right:-6%;bottom:42%}.title-note{display:none}.title-menu{max-width:520px;justify-self:center;padding:24px;background:#fcf8edeb;border-radius:30px 30px 0 0;box-shadow:0 -10px 40px #6d774417}.title-nav{margin-bottom:22px;justify-content:space-between}.title-menu h2{font-size:27px}.title-themes button{min-height:78px}.title-themes .spirit-art{width:56px;height:56px}.home-exit{margin-top:10px}}
 @media(prefers-reduced-motion:reduce){.title-friends>.spirit-art{animation:none}.title-themes button,.home-start{transition:none}}
+
+
+/* Portfolio theatre tuning: larger, tighter title cast and a fuller play area. */
+@media (min-width: 1400px) and (min-height: 850px) {
+  .title-illustration .title-friends {
+    width: 780px;
+    height: 270px;
+    margin-inline: auto;
+  }
+
+  .title-illustration .title-friends .friend-cat,
+  .title-illustration .title-friends .friend-dog,
+  .title-illustration .title-friends .friend-cake {
+    width: 290px;
+    height: 290px;
+    bottom: 0;
+  }
+
+  .title-illustration .title-friends .friend-cat {
+    left: 4%;
+    right: auto;
+  }
+
+  .title-illustration .title-friends .friend-dog {
+    left: calc(50% - 145px);
+    right: auto;
+  }
+
+  .title-illustration .title-friends .friend-cake {
+    left: auto;
+    right: 4%;
+  }
+
+  #play-screen.picnic-layout {
+    overflow: hidden;
+  }
+
+  #play-screen.picnic-layout .game-room {
+    transform: scale(1.24);
+    transform-origin: 50% 50%;
+  }
+}
+
+
+
+/* Portfolio cover cast and full-height play room, 2026-09-10. */
+@media (min-width: 1200px) and (min-height: 760px) {
+  .title-illustration .title-friends {
+    width: min(900px, 94%);
+    height: 290px;
+    margin-inline: auto;
+  }
+
+  .title-illustration .title-friends > .spirit-art {
+    width: 260px;
+    height: 260px;
+    max-width: none;
+    bottom: 0;
+    transform-origin: 50% 86%;
+  }
+
+  .title-illustration .title-friends .friend-cat {
+    left: 0;
+    right: auto;
+    bottom: 1%;
+    z-index: 1;
+  }
+
+  .title-illustration .title-friends .friend-dog {
+    left: 20%;
+    right: auto;
+    bottom: -2%;
+    z-index: 2;
+  }
+
+  .title-illustration .title-friends .friend-rabbit {
+    width: 290px;
+    height: 290px;
+    left: calc(50% - 145px);
+    right: auto;
+    bottom: -4%;
+    z-index: 5;
+    animation-delay: -1s !important;
+  }
+
+  .title-illustration .title-friends .friend-berry {
+    left: auto;
+    right: 20%;
+    bottom: -2%;
+    z-index: 3;
+    animation-delay: -3s !important;
+  }
+
+  .title-illustration .title-friends .friend-cake {
+    left: auto;
+    right: 0;
+    bottom: 1%;
+    z-index: 1;
+  }
+
+  html[data-embedded="true"] .picnic-layout {
+    min-height: 100svh;
+    padding: 10px;
+    overflow: hidden;
+  }
+
+  html[data-embedded="true"] .picnic-layout .game-room {
+    width: min(680px, calc((100svh - 34px) * .6153846));
+    max-width: calc(100vw - 28px);
+    transform: none;
+    transform-origin: 50% 50%;
+  }
+}
+
+@media (max-width: 1199px) {
+  .title-friends .friend-rabbit,
+  .title-friends .friend-berry {
+    display: none;
+  }
+}
+
+/* Portfolio theatre layout: fill the wide frame with useful game context
+   instead of magnifying the portrait board. Standalone/mobile stay unchanged. */
+@media (min-width: 1280px) and (min-height: 760px) {
+  html[data-embedded="true"] #play-screen.picnic-layout {
+    display: grid;
+    grid-template-columns: minmax(220px, 270px) minmax(0, 590px) minmax(230px, 285px);
+    justify-content: center;
+    align-items: center;
+    gap: clamp(20px, 2.2vw, 38px);
+    min-height: 100svh;
+    padding: 18px 24px;
+    overflow: hidden;
+  }
+
+  html[data-embedded="true"] #play-screen .club-sidebar,
+  html[data-embedded="true"] #play-screen .collection-sidebar {
+    display: flex;
+    width: 100%;
+    max-width: none;
+    max-height: calc(100svh - 42px);
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(112, 126, 91, .32) transparent;
+  }
+
+  html[data-embedded="true"] #play-screen .game-room {
+    width: min(590px, calc((100svh - 36px) * .6153846));
+    max-width: 590px;
+    transform: none !important;
+    transform-origin: 50% 50%;
+  }
+
+  html[data-embedded="true"] #play-screen .club-sidebar {
+    justify-self: end;
+  }
+
+  html[data-embedded="true"] #play-screen .collection-sidebar {
+    justify-self: start;
+  }
+}
+
+@media (min-width: 1280px) and (min-height: 760px) {
+  html[data-embedded="true"] #play-screen .club-sidebar,
+  html[data-embedded="true"] #play-screen .collection-sidebar {
+    display: block;
+  }
+}
+

@@ -54,3 +54,7 @@
 @media(max-width:360px){.sky-controls{flex-wrap:wrap;justify-content:center}.sky-view-choices .sky-choice{padding:8px;font-size:10px}.sky-close{padding:6px 8px}.sky-view-header h2{font-size:16px}}
 @media(max-width:800px){.sky-related{max-width:none;text-align:left;margin-top:14px;border-top:1px solid #c5b39422;padding-top:10px}.sky-related>p,.sky-related-list{display:none}.sky-related-archive{display:inline-block;font-size:11px;min-height:40px;padding:7px 0}}
 @media(prefers-reduced-motion:reduce),(hover:none){.sky-image-stack,.sky-view-image{transform:none!important;transition:none}.sky-view-gesture{display:none}}
+
+/* Same-origin previews remain visible while the responsive photographs load. */
+.entry-sky{background-image:url('images/sky/cosmic-cliffs-preview.webp');background-size:cover;background-position:65% 48%}
+.sky-view-print{background-size:contain;background-position:center;background-repeat:no-repeat}

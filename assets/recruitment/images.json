@@ -1,0 +1,874 @@
+{
+  "images/gourd-museum-display.jpg": {
+    "width": 1920,
+    "height": 1080,
+    "original": "images/gourd-museum-display.jpg",
+    "small": "assets/recruitment/images--gourd-museum-display-small.webp",
+    "medium": "assets/recruitment/images--gourd-museum-display-medium.webp",
+    "large": "assets/recruitment/images--gourd-museum-display-large.webp"
+  },
+  "images/woola-02-brand-system.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "original": "images/woola-02-brand-system.jpg",
+    "small": "assets/recruitment/images--woola-02-brand-system-small.webp",
+    "medium": "assets/recruitment/images--woola-02-brand-system-medium.webp",
+    "large": "assets/recruitment/images--woola-02-brand-system-large.webp"
+  },
+  "images/woola-01-store.jpg": {
+    "width": 1376,
+    "height": 768,
+    "original": "images/woola-01-store.jpg",
+    "small": "assets/recruitment/images--woola-01-store-small.webp",
+    "medium": "assets/recruitment/images--woola-01-store-medium.webp",
+    "large": "assets/recruitment/images--woola-01-store-large.webp"
+  },
+  "images/woola-03-packaging.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "original": "images/woola-03-packaging.jpg",
+    "small": "assets/recruitment/images--woola-03-packaging-small.webp",
+    "medium": "assets/recruitment/images--woola-03-packaging-medium.webp",
+    "large": "assets/recruitment/images--woola-03-packaging-large.webp"
+  },
+  "images/woola-04-store.jpg": {
+    "width": 1376,
+    "height": 768,
+    "original": "images/woola-04-store.jpg",
+    "small": "assets/recruitment/images--woola-04-store-small.webp",
+    "medium": "assets/recruitment/images--woola-04-store-medium.webp",
+    "large": "assets/recruitment/images--woola-04-store-large.webp"
+  },
+  "images/cattea-05-store-interior.jpg": {
+    "width": 2752,
+    "height": 1536,
+    "original": "images/cattea-05-store-interior.jpg",
+    "small": "assets/recruitment/images--cattea-05-store-interior-small.webp",
+    "medium": "assets/recruitment/images--cattea-05-store-interior-medium.webp",
+    "large": "assets/recruitment/images--cattea-05-store-interior-large.webp"
+  },
+  "images/cattea-01-menu.jpeg": {
+    "width": 768,
+    "height": 1376,
+    "original": "images/cattea-01-menu.jpeg",
+    "small": "assets/recruitment/images--cattea-01-menu-small.webp",
+    "medium": "assets/recruitment/images--cattea-01-menu-medium.webp",
+    "large": "assets/recruitment/images--cattea-01-menu-large.webp"
+  },
+  "images/cattea-07-brand-guidelines.jpg": {
+    "width": 2752,
+    "height": 1536,
+    "original": "images/cattea-07-brand-guidelines.jpg",
+    "small": "assets/recruitment/images--cattea-07-brand-guidelines-small.webp",
+    "medium": "assets/recruitment/images--cattea-07-brand-guidelines-medium.webp",
+    "large": "assets/recruitment/images--cattea-07-brand-guidelines-large.webp"
+  },
+  "images/cattea-02-store-layout.png": {
+    "width": 1376,
+    "height": 768,
+    "original": "images/cattea-02-store-layout.png",
+    "small": "assets/recruitment/images--cattea-02-store-layout-small.webp",
+    "medium": "assets/recruitment/images--cattea-02-store-layout-medium.webp",
+    "large": "assets/recruitment/images--cattea-02-store-layout-large.webp"
+  },
+  "images/cattea-03-cake-packaging.png": {
+    "width": 768,
+    "height": 1376,
+    "original": "images/cattea-03-cake-packaging.png",
+    "small": "assets/recruitment/images--cattea-03-cake-packaging-small.webp",
+    "medium": "assets/recruitment/images--cattea-03-cake-packaging-medium.webp",
+    "large": "assets/recruitment/images--cattea-03-cake-packaging-large.webp"
+  },
+  "images/cattea-04-merchandise.jpg": {
+    "width": 2752,
+    "height": 1536,
+    "original": "images/cattea-04-merchandise.jpg",
+    "small": "assets/recruitment/images--cattea-04-merchandise-small.webp",
+    "medium": "assets/recruitment/images--cattea-04-merchandise-medium.webp",
+    "large": "assets/recruitment/images--cattea-04-merchandise-large.webp"
+  },
+  "images/cattea-06-drinks.jpg": {
+    "width": 2752,
+    "height": 1536,
+    "original": "images/cattea-06-drinks.jpg",
+    "small": "assets/recruitment/images--cattea-06-drinks-small.webp",
+    "medium": "assets/recruitment/images--cattea-06-drinks-medium.webp",
+    "large": "assets/recruitment/images--cattea-06-drinks-large.webp"
+  },
+  "images/cattea-08-tea-products.jpg": {
+    "width": 2752,
+    "height": 1536,
+    "original": "images/cattea-08-tea-products.jpg",
+    "small": "assets/recruitment/images--cattea-08-tea-products-small.webp",
+    "medium": "assets/recruitment/images--cattea-08-tea-products-medium.webp",
+    "large": "assets/recruitment/images--cattea-08-tea-products-large.webp"
+  },
+  "images/petapp-02-home.jpg": {
+    "width": 768,
+    "height": 1376,
+    "original": "images/petapp-02-home.jpg",
+    "small": "assets/recruitment/images--petapp-02-home-small.webp",
+    "medium": "assets/recruitment/images--petapp-02-home-medium.webp",
+    "large": "assets/recruitment/images--petapp-02-home-large.webp"
+  },
+  "images/petapp-01-record.png": {
+    "width": 768,
+    "height": 1376,
+    "original": "images/petapp-01-record.png",
+    "small": "assets/recruitment/images--petapp-01-record-small.webp",
+    "medium": "assets/recruitment/images--petapp-01-record-medium.webp",
+    "large": "assets/recruitment/images--petapp-01-record-large.webp"
+  },
+  "images/petapp-03-profile.jpg": {
+    "width": 768,
+    "height": 1376,
+    "original": "images/petapp-03-profile.jpg",
+    "small": "assets/recruitment/images--petapp-03-profile-small.webp",
+    "medium": "assets/recruitment/images--petapp-03-profile-medium.webp",
+    "large": "assets/recruitment/images--petapp-03-profile-large.webp"
+  },
+  "images/petapp-04-design-system.jpg": {
+    "width": 768,
+    "height": 1376,
+    "original": "images/petapp-04-design-system.jpg",
+    "small": "assets/recruitment/images--petapp-04-design-system-small.webp",
+    "medium": "assets/recruitment/images--petapp-04-design-system-medium.webp",
+    "large": "assets/recruitment/images--petapp-04-design-system-large.webp"
+  },
+  "images/project-management-dashboard.png": {
+    "width": 1583,
+    "height": 1313,
+    "original": "images/project-management-dashboard.png",
+    "small": "assets/recruitment/images--project-management-dashboard-small.webp",
+    "medium": "assets/recruitment/images--project-management-dashboard-medium.webp",
+    "large": "assets/recruitment/images--project-management-dashboard-large.webp"
+  },
+  "images/stock-radar-dashboard.png": {
+    "width": 1583,
+    "height": 1315,
+    "original": "images/stock-radar-dashboard.png",
+    "small": "assets/recruitment/images--stock-radar-dashboard-small.webp",
+    "medium": "assets/recruitment/images--stock-radar-dashboard-medium.webp",
+    "large": "assets/recruitment/images--stock-radar-dashboard-large.webp"
+  },
+  "images/digital-library-dashboard.png": {
+    "width": 1583,
+    "height": 1313,
+    "original": "images/digital-library-dashboard.png",
+    "small": "assets/recruitment/images--digital-library-dashboard-small.webp",
+    "medium": "assets/recruitment/images--digital-library-dashboard-medium.webp",
+    "large": "assets/recruitment/images--digital-library-dashboard-large.webp"
+  },
+  "images/life-os-review.png": {
+    "width": 1200,
+    "height": 800,
+    "original": "images/life-os-review.png",
+    "small": "assets/recruitment/images--life-os-review-small.webp",
+    "medium": "assets/recruitment/images--life-os-review-medium.webp",
+    "large": "assets/recruitment/images--life-os-review-large.webp"
+  },
+  "images/life-os-assistants.png": {
+    "width": 1200,
+    "height": 800,
+    "original": "images/life-os-assistants.png",
+    "small": "assets/recruitment/images--life-os-assistants-small.webp",
+    "medium": "assets/recruitment/images--life-os-assistants-medium.webp",
+    "large": "assets/recruitment/images--life-os-assistants-large.webp"
+  },
+  "images/orderly-journey-cover.png": {
+    "width": 556,
+    "height": 512,
+    "original": "images/orderly-journey-cover.png",
+    "small": "assets/recruitment/images--orderly-journey-cover-small.webp",
+    "medium": "assets/recruitment/images--orderly-journey-cover-medium.webp",
+    "large": "assets/recruitment/images--orderly-journey-cover-large.webp"
+  },
+  "images/pptx/image4.png": {
+    "width": 1600,
+    "height": 893,
+    "original": "images/pptx/image4.png",
+    "small": "assets/recruitment/images--pptx--image4-small.webp",
+    "medium": "assets/recruitment/images--pptx--image4-medium.webp",
+    "large": "assets/recruitment/images--pptx--image4-large.webp"
+  },
+  "images/pptx/image5.png": {
+    "width": 363,
+    "height": 323,
+    "original": "images/pptx/image5.png",
+    "small": "assets/recruitment/images--pptx--image5-small.webp",
+    "medium": "assets/recruitment/images--pptx--image5-medium.webp",
+    "large": "assets/recruitment/images--pptx--image5-large.webp"
+  },
+  "images/pptx/image6.png": {
+    "width": 1600,
+    "height": 1138,
+    "original": "images/pptx/image6.png",
+    "small": "assets/recruitment/images--pptx--image6-small.webp",
+    "medium": "assets/recruitment/images--pptx--image6-medium.webp",
+    "large": "assets/recruitment/images--pptx--image6-large.webp"
+  },
+  "images/pptx/image7.png": {
+    "width": 829,
+    "height": 430,
+    "original": "images/pptx/image7.png",
+    "small": "assets/recruitment/images--pptx--image7-small.webp",
+    "medium": "assets/recruitment/images--pptx--image7-medium.webp",
+    "large": "assets/recruitment/images--pptx--image7-large.webp"
+  },
+  "images/eye-mountain-cover.jpg": {
+    "width": 1200,
+    "height": 645,
+    "original": "images/eye-mountain-cover.jpg",
+    "small": "assets/recruitment/images--eye-mountain-cover-small.webp",
+    "medium": "assets/recruitment/images--eye-mountain-cover-medium.webp",
+    "large": "assets/recruitment/images--eye-mountain-cover-large.webp"
+  },
+  "images/eye-mountain-product1.jpg": {
+    "width": 1200,
+    "height": 671,
+    "original": "images/eye-mountain-product1.jpg",
+    "small": "assets/recruitment/images--eye-mountain-product1-small.webp",
+    "medium": "assets/recruitment/images--eye-mountain-product1-medium.webp",
+    "large": "assets/recruitment/images--eye-mountain-product1-large.webp"
+  },
+  "images/eye-mountain-product2.jpg": {
+    "width": 1200,
+    "height": 671,
+    "original": "images/eye-mountain-product2.jpg",
+    "small": "assets/recruitment/images--eye-mountain-product2-small.webp",
+    "medium": "assets/recruitment/images--eye-mountain-product2-medium.webp",
+    "large": "assets/recruitment/images--eye-mountain-product2-large.webp"
+  },
+  "images/eye-mountain-product3.png": {
+    "width": 1096,
+    "height": 784,
+    "original": "images/eye-mountain-product3.png",
+    "small": "assets/recruitment/images--eye-mountain-product3-small.webp",
+    "medium": "assets/recruitment/images--eye-mountain-product3-medium.webp",
+    "large": "assets/recruitment/images--eye-mountain-product3-large.webp"
+  },
+  "images/filter-life-cover-new.jpg": {
+    "width": 1200,
+    "height": 688,
+    "original": "images/filter-life-cover-new.jpg",
+    "small": "assets/recruitment/images--filter-life-cover-new-small.webp",
+    "medium": "assets/recruitment/images--filter-life-cover-new-medium.webp",
+    "large": "assets/recruitment/images--filter-life-cover-new-large.webp"
+  },
+  "images/filter-life-keyframe1.jpg": {
+    "width": 1200,
+    "height": 692,
+    "original": "images/filter-life-keyframe1.jpg",
+    "small": "assets/recruitment/images--filter-life-keyframe1-small.webp",
+    "medium": "assets/recruitment/images--filter-life-keyframe1-medium.webp",
+    "large": "assets/recruitment/images--filter-life-keyframe1-large.webp"
+  },
+  "images/filter-life-3view.jpg": {
+    "width": 1200,
+    "height": 1189,
+    "original": "images/filter-life-3view.jpg",
+    "small": "assets/recruitment/images--filter-life-3view-small.webp",
+    "medium": "assets/recruitment/images--filter-life-3view-medium.webp",
+    "large": "assets/recruitment/images--filter-life-3view-large.webp"
+  },
+  "images/spirit-roam-cover.png": {
+    "width": 1672,
+    "height": 941,
+    "original": "images/spirit-roam-cover.png",
+    "small": "assets/recruitment/images--spirit-roam-cover-small.webp",
+    "medium": "assets/recruitment/images--spirit-roam-cover-medium.webp",
+    "large": "assets/recruitment/images--spirit-roam-cover-large.webp"
+  },
+  "images/spirit-roam-gameplay.png": {
+    "width": 1280,
+    "height": 720,
+    "original": "images/spirit-roam-gameplay.png",
+    "small": "assets/recruitment/images--spirit-roam-gameplay-small.webp",
+    "medium": "assets/recruitment/images--spirit-roam-gameplay-medium.webp",
+    "large": "assets/recruitment/images--spirit-roam-gameplay-large.webp"
+  },
+  "images/little-picnic-club-title.png": {
+    "width": 1265,
+    "height": 821,
+    "original": "images/little-picnic-club-title.png",
+    "small": "assets/recruitment/images--little-picnic-club-title-small.webp",
+    "medium": "assets/recruitment/images--little-picnic-club-title-medium.webp",
+    "large": "assets/recruitment/images--little-picnic-club-title-large.webp"
+  },
+  "images/little-picnic-club-preview.png": {
+    "width": 1265,
+    "height": 763,
+    "original": "images/little-picnic-club-preview.png",
+    "small": "assets/recruitment/images--little-picnic-club-preview-small.webp",
+    "medium": "assets/recruitment/images--little-picnic-club-preview-medium.webp",
+    "large": "assets/recruitment/images--little-picnic-club-preview-large.webp"
+  },
+  "images/little-picnic-club-food-preview.png": {
+    "width": 1265,
+    "height": 763,
+    "original": "images/little-picnic-club-food-preview.png",
+    "small": "assets/recruitment/images--little-picnic-club-food-preview-small.webp",
+    "medium": "assets/recruitment/images--little-picnic-club-food-preview-medium.webp",
+    "large": "assets/recruitment/images--little-picnic-club-food-preview-large.webp"
+  },
+  "images/snake-game-cover.png": {
+    "width": 1024,
+    "height": 1024,
+    "original": "images/snake-game-cover.png",
+    "small": "assets/recruitment/images--snake-game-cover-small.webp",
+    "medium": "assets/recruitment/images--snake-game-cover-medium.webp",
+    "large": "assets/recruitment/images--snake-game-cover-large.webp"
+  },
+  "images/dream-guardians-cover.png": {
+    "width": 1672,
+    "height": 941,
+    "original": "images/dream-guardians-cover.png",
+    "small": "assets/recruitment/images--dream-guardians-cover-small.webp",
+    "medium": "assets/recruitment/images--dream-guardians-cover-medium.webp",
+    "large": "assets/recruitment/images--dream-guardians-cover-large.webp"
+  },
+  "images/wild-geometry-title.png": {
+    "width": 734,
+    "height": 410,
+    "original": "images/wild-geometry-title.png",
+    "small": "assets/recruitment/images--wild-geometry-title-small.webp",
+    "medium": "assets/recruitment/images--wild-geometry-title-medium.webp",
+    "large": "assets/recruitment/images--wild-geometry-title-large.webp"
+  },
+  "images/wild-geometry-alphabet.png": {
+    "width": 637,
+    "height": 408,
+    "original": "images/wild-geometry-alphabet.png",
+    "small": "assets/recruitment/images--wild-geometry-alphabet-small.webp",
+    "medium": "assets/recruitment/images--wild-geometry-alphabet-medium.webp",
+    "large": "assets/recruitment/images--wild-geometry-alphabet-large.webp"
+  },
+  "images/wild-geometry-numerals.png": {
+    "width": 733,
+    "height": 417,
+    "original": "images/wild-geometry-numerals.png",
+    "small": "assets/recruitment/images--wild-geometry-numerals-small.webp",
+    "medium": "assets/recruitment/images--wild-geometry-numerals-medium.webp",
+    "large": "assets/recruitment/images--wild-geometry-numerals-large.webp"
+  },
+  "images/pptx/image8.png": {
+    "width": 1600,
+    "height": 872,
+    "original": "images/pptx/image8.png",
+    "small": "assets/recruitment/images--pptx--image8-small.webp",
+    "medium": "assets/recruitment/images--pptx--image8-medium.webp",
+    "large": "assets/recruitment/images--pptx--image8-large.webp"
+  },
+  "images/pptx/image9.jpeg": {
+    "width": 975,
+    "height": 1300,
+    "original": "images/pptx/image9.jpeg",
+    "small": "assets/recruitment/images--pptx--image9-small.webp",
+    "medium": "assets/recruitment/images--pptx--image9-medium.webp",
+    "large": "assets/recruitment/images--pptx--image9-large.webp"
+  },
+  "images/pptx/image10.png": {
+    "width": 1600,
+    "height": 872,
+    "original": "images/pptx/image10.png",
+    "small": "assets/recruitment/images--pptx--image10-small.webp",
+    "medium": "assets/recruitment/images--pptx--image10-medium.webp",
+    "large": "assets/recruitment/images--pptx--image10-large.webp"
+  },
+  "images/pptx/image11.png": {
+    "width": 1600,
+    "height": 872,
+    "original": "images/pptx/image11.png",
+    "small": "assets/recruitment/images--pptx--image11-small.webp",
+    "medium": "assets/recruitment/images--pptx--image11-medium.webp",
+    "large": "assets/recruitment/images--pptx--image11-large.webp"
+  },
+  "images/pptx/image12.png": {
+    "width": 1600,
+    "height": 872,
+    "original": "images/pptx/image12.png",
+    "small": "assets/recruitment/images--pptx--image12-small.webp",
+    "medium": "assets/recruitment/images--pptx--image12-medium.webp",
+    "large": "assets/recruitment/images--pptx--image12-large.webp"
+  },
+  "images/pptx/image13.png": {
+    "width": 1600,
+    "height": 872,
+    "original": "images/pptx/image13.png",
+    "small": "assets/recruitment/images--pptx--image13-small.webp",
+    "medium": "assets/recruitment/images--pptx--image13-medium.webp",
+    "large": "assets/recruitment/images--pptx--image13-large.webp"
+  },
+  "images/pptx/image14.jpeg": {
+    "width": 1534,
+    "height": 704,
+    "original": "images/pptx/image14.jpeg",
+    "small": "assets/recruitment/images--pptx--image14-small.webp",
+    "medium": "assets/recruitment/images--pptx--image14-medium.webp",
+    "large": "assets/recruitment/images--pptx--image14-large.webp"
+  },
+  "images/pptx/image15.png": {
+    "width": 1600,
+    "height": 669,
+    "original": "images/pptx/image15.png",
+    "small": "assets/recruitment/images--pptx--image15-small.webp",
+    "medium": "assets/recruitment/images--pptx--image15-medium.webp",
+    "large": "assets/recruitment/images--pptx--image15-large.webp"
+  },
+  "images/pptx/image16.png": {
+    "width": 1079,
+    "height": 1600,
+    "original": "images/pptx/image16.png",
+    "small": "assets/recruitment/images--pptx--image16-small.webp",
+    "medium": "assets/recruitment/images--pptx--image16-medium.webp",
+    "large": "assets/recruitment/images--pptx--image16-large.webp"
+  },
+  "images/pptx/image17.png": {
+    "width": 1600,
+    "height": 872,
+    "original": "images/pptx/image17.png",
+    "small": "assets/recruitment/images--pptx--image17-small.webp",
+    "medium": "assets/recruitment/images--pptx--image17-medium.webp",
+    "large": "assets/recruitment/images--pptx--image17-large.webp"
+  },
+  "images/pptx/image18.jpeg": {
+    "width": 1024,
+    "height": 558,
+    "original": "images/pptx/image18.jpeg",
+    "small": "assets/recruitment/images--pptx--image18-small.webp",
+    "medium": "assets/recruitment/images--pptx--image18-medium.webp",
+    "large": "assets/recruitment/images--pptx--image18-large.webp"
+  },
+  "images/pptx/image19.jpeg": {
+    "width": 1024,
+    "height": 558,
+    "original": "images/pptx/image19.jpeg",
+    "small": "assets/recruitment/images--pptx--image19-small.webp",
+    "medium": "assets/recruitment/images--pptx--image19-medium.webp",
+    "large": "assets/recruitment/images--pptx--image19-large.webp"
+  },
+  "images/pptx/image20.jpeg": {
+    "width": 1024,
+    "height": 558,
+    "original": "images/pptx/image20.jpeg",
+    "small": "assets/recruitment/images--pptx--image20-small.webp",
+    "medium": "assets/recruitment/images--pptx--image20-medium.webp",
+    "large": "assets/recruitment/images--pptx--image20-large.webp"
+  },
+  "images/pptx/image21.jpeg": {
+    "width": 1024,
+    "height": 558,
+    "original": "images/pptx/image21.jpeg",
+    "small": "assets/recruitment/images--pptx--image21-small.webp",
+    "medium": "assets/recruitment/images--pptx--image21-medium.webp",
+    "large": "assets/recruitment/images--pptx--image21-large.webp"
+  },
+  "images/elena-3view.jpg": {
+    "width": 1200,
+    "height": 900,
+    "original": "images/elena-3view.jpg",
+    "small": "assets/recruitment/images--elena-3view-small.webp",
+    "medium": "assets/recruitment/images--elena-3view-medium.webp",
+    "large": "assets/recruitment/images--elena-3view-large.webp"
+  },
+  "images/elena-stickers1.jpg": {
+    "width": 1170,
+    "height": 1200,
+    "original": "images/elena-stickers1.jpg",
+    "small": "assets/recruitment/images--elena-stickers1-small.webp",
+    "medium": "assets/recruitment/images--elena-stickers1-medium.webp",
+    "large": "assets/recruitment/images--elena-stickers1-large.webp"
+  },
+  "images/elena-stickers2.jpg": {
+    "width": 851,
+    "height": 1200,
+    "original": "images/elena-stickers2.jpg",
+    "small": "assets/recruitment/images--elena-stickers2-small.webp",
+    "medium": "assets/recruitment/images--elena-stickers2-medium.webp",
+    "large": "assets/recruitment/images--elena-stickers2-large.webp"
+  },
+  "images/elena-sticker-single.png": {
+    "width": 229,
+    "height": 245,
+    "original": "images/elena-sticker-single.png",
+    "small": "assets/recruitment/images--elena-sticker-single-small.webp",
+    "medium": "assets/recruitment/images--elena-sticker-single-medium.webp",
+    "large": "assets/recruitment/images--elena-sticker-single-large.webp"
+  },
+  "images/pptx/image30.png": {
+    "width": 384,
+    "height": 453,
+    "original": "images/pptx/image30.png",
+    "small": "assets/recruitment/images--pptx--image30-small.webp",
+    "medium": "assets/recruitment/images--pptx--image30-medium.webp",
+    "large": "assets/recruitment/images--pptx--image30-large.webp"
+  },
+  "images/pptx/image31.jpeg": {
+    "width": 1024,
+    "height": 559,
+    "original": "images/pptx/image31.jpeg",
+    "small": "assets/recruitment/images--pptx--image31-small.webp",
+    "medium": "assets/recruitment/images--pptx--image31-medium.webp",
+    "large": "assets/recruitment/images--pptx--image31-large.webp"
+  },
+  "images/pptx/image32.jpeg": {
+    "width": 1408,
+    "height": 768,
+    "original": "images/pptx/image32.jpeg",
+    "small": "assets/recruitment/images--pptx--image32-small.webp",
+    "medium": "assets/recruitment/images--pptx--image32-medium.webp",
+    "large": "assets/recruitment/images--pptx--image32-large.webp"
+  },
+  "images/pptx/image33.png": {
+    "width": 1600,
+    "height": 1600,
+    "original": "images/pptx/image33.png",
+    "small": "assets/recruitment/images--pptx--image33-small.webp",
+    "medium": "assets/recruitment/images--pptx--image33-medium.webp",
+    "large": "assets/recruitment/images--pptx--image33-large.webp"
+  },
+  "images/pptx/image34.png": {
+    "width": 1600,
+    "height": 1600,
+    "original": "images/pptx/image34.png",
+    "small": "assets/recruitment/images--pptx--image34-small.webp",
+    "medium": "assets/recruitment/images--pptx--image34-medium.webp",
+    "large": "assets/recruitment/images--pptx--image34-large.webp"
+  },
+  "images/pptx/image35.jpeg": {
+    "width": 1024,
+    "height": 559,
+    "original": "images/pptx/image35.jpeg",
+    "small": "assets/recruitment/images--pptx--image35-small.webp",
+    "medium": "assets/recruitment/images--pptx--image35-medium.webp",
+    "large": "assets/recruitment/images--pptx--image35-large.webp"
+  },
+  "images/pptx/image36.png": {
+    "width": 1561,
+    "height": 1600,
+    "original": "images/pptx/image36.png",
+    "small": "assets/recruitment/images--pptx--image36-small.webp",
+    "medium": "assets/recruitment/images--pptx--image36-medium.webp",
+    "large": "assets/recruitment/images--pptx--image36-large.webp"
+  },
+  "images/pptx/image37.png": {
+    "width": 137,
+    "height": 216,
+    "original": "images/pptx/image37.png",
+    "small": "assets/recruitment/images--pptx--image37-small.webp",
+    "medium": "assets/recruitment/images--pptx--image37-medium.webp",
+    "large": "assets/recruitment/images--pptx--image37-large.webp"
+  },
+  "images/pptx/image38.png": {
+    "width": 753,
+    "height": 207,
+    "original": "images/pptx/image38.png",
+    "small": "assets/recruitment/images--pptx--image38-small.webp",
+    "medium": "assets/recruitment/images--pptx--image38-medium.webp",
+    "large": "assets/recruitment/images--pptx--image38-large.webp"
+  },
+  "images/pptx/image39.png": {
+    "width": 1600,
+    "height": 495,
+    "original": "images/pptx/image39.png",
+    "small": "assets/recruitment/images--pptx--image39-small.webp",
+    "medium": "assets/recruitment/images--pptx--image39-medium.webp",
+    "large": "assets/recruitment/images--pptx--image39-large.webp"
+  },
+  "images/pptx/image40.jpeg": {
+    "width": 1024,
+    "height": 559,
+    "original": "images/pptx/image40.jpeg",
+    "small": "assets/recruitment/images--pptx--image40-small.webp",
+    "medium": "assets/recruitment/images--pptx--image40-medium.webp",
+    "large": "assets/recruitment/images--pptx--image40-large.webp"
+  },
+  "images/pptx/image41.png": {
+    "width": 1600,
+    "height": 452,
+    "original": "images/pptx/image41.png",
+    "small": "assets/recruitment/images--pptx--image41-small.webp",
+    "medium": "assets/recruitment/images--pptx--image41-medium.webp",
+    "large": "assets/recruitment/images--pptx--image41-large.webp"
+  },
+  "images/pptx/image42.jpeg": {
+    "width": 1024,
+    "height": 559,
+    "original": "images/pptx/image42.jpeg",
+    "small": "assets/recruitment/images--pptx--image42-small.webp",
+    "medium": "assets/recruitment/images--pptx--image42-medium.webp",
+    "large": "assets/recruitment/images--pptx--image42-large.webp"
+  },
+  "images/pptx/image43.jpeg": {
+    "width": 1024,
+    "height": 559,
+    "original": "images/pptx/image43.jpeg",
+    "small": "assets/recruitment/images--pptx--image43-small.webp",
+    "medium": "assets/recruitment/images--pptx--image43-medium.webp",
+    "large": "assets/recruitment/images--pptx--image43-large.webp"
+  },
+  "images/pptx/image44.png": {
+    "width": 1600,
+    "height": 893,
+    "original": "images/pptx/image44.png",
+    "small": "assets/recruitment/images--pptx--image44-small.webp",
+    "medium": "assets/recruitment/images--pptx--image44-medium.webp",
+    "large": "assets/recruitment/images--pptx--image44-large.webp"
+  },
+  "images/pptx/image45.png": {
+    "width": 1600,
+    "height": 893,
+    "original": "images/pptx/image45.png",
+    "small": "assets/recruitment/images--pptx--image45-small.webp",
+    "medium": "assets/recruitment/images--pptx--image45-medium.webp",
+    "large": "assets/recruitment/images--pptx--image45-large.webp"
+  },
+  "images/pptx/image46.png": {
+    "width": 1600,
+    "height": 892,
+    "original": "images/pptx/image46.png",
+    "small": "assets/recruitment/images--pptx--image46-small.webp",
+    "medium": "assets/recruitment/images--pptx--image46-medium.webp",
+    "large": "assets/recruitment/images--pptx--image46-large.webp"
+  },
+  "images/pptx/image47.png": {
+    "width": 1600,
+    "height": 863,
+    "original": "images/pptx/image47.png",
+    "small": "assets/recruitment/images--pptx--image47-small.webp",
+    "medium": "assets/recruitment/images--pptx--image47-medium.webp",
+    "large": "assets/recruitment/images--pptx--image47-large.webp"
+  },
+  "images/pptx/image48.png": {
+    "width": 1600,
+    "height": 893,
+    "original": "images/pptx/image48.png",
+    "small": "assets/recruitment/images--pptx--image48-small.webp",
+    "medium": "assets/recruitment/images--pptx--image48-medium.webp",
+    "large": "assets/recruitment/images--pptx--image48-large.webp"
+  },
+  "images/pptx/image49.png": {
+    "width": 1600,
+    "height": 893,
+    "original": "images/pptx/image49.png",
+    "small": "assets/recruitment/images--pptx--image49-small.webp",
+    "medium": "assets/recruitment/images--pptx--image49-medium.webp",
+    "large": "assets/recruitment/images--pptx--image49-large.webp"
+  },
+  "images/pptx/image50.png": {
+    "width": 737,
+    "height": 1600,
+    "original": "images/pptx/image50.png",
+    "small": "assets/recruitment/images--pptx--image50-small.webp",
+    "medium": "assets/recruitment/images--pptx--image50-medium.webp",
+    "large": "assets/recruitment/images--pptx--image50-large.webp"
+  },
+  "images/pptx/image51.png": {
+    "width": 737,
+    "height": 1600,
+    "original": "images/pptx/image51.png",
+    "small": "assets/recruitment/images--pptx--image51-small.webp",
+    "medium": "assets/recruitment/images--pptx--image51-medium.webp",
+    "large": "assets/recruitment/images--pptx--image51-large.webp"
+  },
+  "images/pptx/image52.png": {
+    "width": 1600,
+    "height": 893,
+    "original": "images/pptx/image52.png",
+    "small": "assets/recruitment/images--pptx--image52-small.webp",
+    "medium": "assets/recruitment/images--pptx--image52-medium.webp",
+    "large": "assets/recruitment/images--pptx--image52-large.webp"
+  },
+  "images/mistscent-01-overview.jpg": {
+    "width": 896,
+    "height": 1200,
+    "original": "images/mistscent-01-overview.jpg",
+    "small": "assets/recruitment/images--mistscent-01-overview-small.webp",
+    "medium": "assets/recruitment/images--mistscent-01-overview-medium.webp",
+    "large": "assets/recruitment/images--mistscent-01-overview-large.webp"
+  },
+  "images/mistscent-04-logo.png": {
+    "width": 1024,
+    "height": 1024,
+    "original": "images/mistscent-04-logo.png",
+    "small": "assets/recruitment/images--mistscent-04-logo-small.webp",
+    "medium": "assets/recruitment/images--mistscent-04-logo-medium.webp",
+    "large": "assets/recruitment/images--mistscent-04-logo-large.webp"
+  },
+  "images/mistscent-02-matchbox.jpg": {
+    "width": 896,
+    "height": 1200,
+    "original": "images/mistscent-02-matchbox.jpg",
+    "small": "assets/recruitment/images--mistscent-02-matchbox-small.webp",
+    "medium": "assets/recruitment/images--mistscent-02-matchbox-medium.webp",
+    "large": "assets/recruitment/images--mistscent-02-matchbox-large.webp"
+  },
+  "images/mistscent-05-candle-glass.jpg": {
+    "width": 896,
+    "height": 1200,
+    "original": "images/mistscent-05-candle-glass.jpg",
+    "small": "assets/recruitment/images--mistscent-05-candle-glass-small.webp",
+    "medium": "assets/recruitment/images--mistscent-05-candle-glass-medium.webp",
+    "large": "assets/recruitment/images--mistscent-05-candle-glass-large.webp"
+  },
+  "images/mistscent-03-wax-tablets.jpg": {
+    "width": 896,
+    "height": 1200,
+    "original": "images/mistscent-03-wax-tablets.jpg",
+    "small": "assets/recruitment/images--mistscent-03-wax-tablets-small.webp",
+    "medium": "assets/recruitment/images--mistscent-03-wax-tablets-medium.webp",
+    "large": "assets/recruitment/images--mistscent-03-wax-tablets-large.webp"
+  },
+  "images/kalio-01-bunny.jpg": {
+    "width": 1071,
+    "height": 1920,
+    "original": "images/kalio-01-bunny.jpg",
+    "small": "assets/recruitment/images--kalio-01-bunny-small.webp",
+    "medium": "assets/recruitment/images--kalio-01-bunny-medium.webp",
+    "large": "assets/recruitment/images--kalio-01-bunny-large.webp"
+  },
+  "images/wangcaicai-01-husky.jpg": {
+    "width": 768,
+    "height": 1376,
+    "original": "images/wangcaicai-01-husky.jpg",
+    "small": "assets/recruitment/images--wangcaicai-01-husky-small.webp",
+    "medium": "assets/recruitment/images--wangcaicai-01-husky-medium.webp",
+    "large": "assets/recruitment/images--wangcaicai-01-husky-large.webp"
+  },
+  "images/odyssey-01-title.jpg": {
+    "width": 768,
+    "height": 1376,
+    "original": "images/odyssey-01-title.jpg",
+    "small": "assets/recruitment/images--odyssey-01-title-small.webp",
+    "medium": "assets/recruitment/images--odyssey-01-title-medium.webp",
+    "large": "assets/recruitment/images--odyssey-01-title-large.webp"
+  },
+  "images/odyssey-02-battle.jpg": {
+    "width": 768,
+    "height": 1376,
+    "original": "images/odyssey-02-battle.jpg",
+    "small": "assets/recruitment/images--odyssey-02-battle-small.webp",
+    "medium": "assets/recruitment/images--odyssey-02-battle-medium.webp",
+    "large": "assets/recruitment/images--odyssey-02-battle-large.webp"
+  },
+  "images/odyssey-03-victory.jpg": {
+    "width": 768,
+    "height": 1376,
+    "original": "images/odyssey-03-victory.jpg",
+    "small": "assets/recruitment/images--odyssey-03-victory-small.webp",
+    "medium": "assets/recruitment/images--odyssey-03-victory-medium.webp",
+    "large": "assets/recruitment/images--odyssey-03-victory-large.webp"
+  },
+  "images/odyssey-04-reward.jpg": {
+    "width": 768,
+    "height": 1376,
+    "original": "images/odyssey-04-reward.jpg",
+    "small": "assets/recruitment/images--odyssey-04-reward-small.webp",
+    "medium": "assets/recruitment/images--odyssey-04-reward-medium.webp",
+    "large": "assets/recruitment/images--odyssey-04-reward-large.webp"
+  },
+  "images/fulu-cover.png": {
+    "width": 366,
+    "height": 492,
+    "original": "images/fulu-cover.png",
+    "small": "assets/recruitment/images--fulu-cover-small.webp",
+    "medium": "assets/recruitment/images--fulu-cover-medium.webp",
+    "large": "assets/recruitment/images--fulu-cover-large.webp"
+  },
+  "images/fulu-logo.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "original": "images/fulu-logo.jpg",
+    "small": "assets/recruitment/images--fulu-logo-small.webp",
+    "medium": "assets/recruitment/images--fulu-logo-medium.webp",
+    "large": "assets/recruitment/images--fulu-logo-large.webp"
+  },
+  "images/fulu-colors.jpg": {
+    "width": 1376,
+    "height": 768,
+    "original": "images/fulu-colors.jpg",
+    "small": "assets/recruitment/images--fulu-colors-small.webp",
+    "medium": "assets/recruitment/images--fulu-colors-medium.webp",
+    "large": "assets/recruitment/images--fulu-colors-large.webp"
+  },
+  "images/fulu-typography.jpg": {
+    "width": 1376,
+    "height": 768,
+    "original": "images/fulu-typography.jpg",
+    "small": "assets/recruitment/images--fulu-typography-small.webp",
+    "medium": "assets/recruitment/images--fulu-typography-medium.webp",
+    "large": "assets/recruitment/images--fulu-typography-large.webp"
+  },
+  "images/fulu-graphics.jpg": {
+    "width": 1376,
+    "height": 768,
+    "original": "images/fulu-graphics.jpg",
+    "small": "assets/recruitment/images--fulu-graphics-small.webp",
+    "medium": "assets/recruitment/images--fulu-graphics-medium.webp",
+    "large": "assets/recruitment/images--fulu-graphics-large.webp"
+  },
+  "images/fulu-poster.jpg": {
+    "width": 1376,
+    "height": 768,
+    "original": "images/fulu-poster.jpg",
+    "small": "assets/recruitment/images--fulu-poster-small.webp",
+    "medium": "assets/recruitment/images--fulu-poster-medium.webp",
+    "large": "assets/recruitment/images--fulu-poster-large.webp"
+  },
+  "images/fulu-social.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "original": "images/fulu-social.jpg",
+    "small": "assets/recruitment/images--fulu-social-small.webp",
+    "medium": "assets/recruitment/images--fulu-social-medium.webp",
+    "large": "assets/recruitment/images--fulu-social-large.webp"
+  },
+  "images/fulu-store.jpg": {
+    "width": 1376,
+    "height": 768,
+    "original": "images/fulu-store.jpg",
+    "small": "assets/recruitment/images--fulu-store-small.webp",
+    "medium": "assets/recruitment/images--fulu-store-medium.webp",
+    "large": "assets/recruitment/images--fulu-store-large.webp"
+  },
+  "images/fulu-merch.jpg": {
+    "width": 1024,
+    "height": 1024,
+    "original": "images/fulu-merch.jpg",
+    "small": "assets/recruitment/images--fulu-merch-small.webp",
+    "medium": "assets/recruitment/images--fulu-merch-medium.webp",
+    "large": "assets/recruitment/images--fulu-merch-large.webp"
+  },
+  "images/word-of-plants-cover.png": {
+    "width": 1376,
+    "height": 768,
+    "original": "images/word-of-plants-cover.png",
+    "small": "assets/recruitment/images--word-of-plants-cover-small.webp",
+    "medium": "assets/recruitment/images--word-of-plants-cover-medium.webp",
+    "large": "assets/recruitment/images--word-of-plants-cover-large.webp"
+  },
+  "images/photo-life-2.png": {
+    "width": 1024,
+    "height": 1024,
+    "original": "images/photo-life-2.png",
+    "small": "assets/recruitment/images--photo-life-2-small.webp",
+    "medium": "assets/recruitment/images--photo-life-2-medium.webp",
+    "large": "assets/recruitment/images--photo-life-2-large.webp"
+  },
+  "images/avatar-home-shoes-cutout.png": {
+    "width": 642,
+    "height": 2048,
+    "original": "images/avatar-home-shoes-cutout.png",
+    "small": "assets/recruitment/images--avatar-home-shoes-cutout-small.webp",
+    "medium": "assets/recruitment/images--avatar-home-shoes-cutout-medium.webp",
+    "large": "assets/recruitment/images--avatar-home-shoes-cutout-large.webp"
+  },
+  "games/dream-guardians/assets/menu-dreamscape.png": {
+    "width": 1672,
+    "height": 941,
+    "original": "games/dream-guardians/assets/menu-dreamscape.png",
+    "small": "assets/recruitment/games--dream-guardians--assets--menu-dreamscape-small.webp",
+    "medium": "assets/recruitment/games--dream-guardians--assets--menu-dreamscape-medium.webp",
+    "large": "assets/recruitment/games--dream-guardians--assets--menu-dreamscape-large.webp"
+  }
+}

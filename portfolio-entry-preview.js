@@ -6,25 +6,25 @@
   document.body.classList.add('atelier-edition');
   const reduced = () => document.body.classList.contains('reduce-motion') || matchMedia('(prefers-reduced-motion: reduce)').matches;
   const definitions = [
-    {id:'product', name:'产品与交互', code:'PRODUCT', front:'#d1d7b5', back:'#8e9f7b', hint:'界面、个人系统与数字展陈', picks:['pet-app','gourd-museum']},
-    {id:'brand', name:'品牌与空间', code:'BRAND', front:'#e2ceb0', back:'#b4a083', hint:'从品牌形象，到包装与空间', picks:['cattea','fulu']},
-    {id:'film', name:'影像放映室', code:'FILM', front:'#c9c7d9', back:'#9197b0', hint:'三支 AI 影像，三种叙事方式', picks:['eye-mountain-river','orderly-journey']},
-    {id:'character', name:'IP 角色', code:'CHARACTER', front:'#e0cabd', back:'#b29a89', hint:'五位角色，五种性格与想象', picks:['cosmic-astra','sylva']},
-    {id:'print', name:'字体与印刷', code:'PRINT', front:'#ced6b8', back:'#91a082', hint:'字体实验与植物卡牌', picks:['wild-geometry','word-of-plants']},
-    {id:'play', name:'小游戏', code:'PLAY', front:'#bad1cd', back:'#7f9d96', hint:'点亮游戏，亲手玩一局', picks:['starling-merge','pet-garden-battle']}
+    {id:'product', name:'产品与交互设计', code:'产品', focus:'智能产品', front:'#d1d7b5', back:'#8e9f7b', hint:'智能产品、界面流程与交互原型', picks:['pet-app','gourd-museum']},
+    {id:'brand', name:'品牌与视觉设计', code:'品牌', focus:'视觉系统', front:'#e2ceb0', back:'#b4a083', hint:'品牌识别、包装物料与空间应用', picks:['cattea','fulu']},
+    {id:'film', name:'人工智能影像', code:'影像', focus:'生成叙事', front:'#c9c7d9', back:'#9197b0', hint:'人工智能广告短片、叙事影像与制作过程', picks:['eye-mountain-river','orderly-journey']},
+    {id:'character', name:'原创角色设计', code:'角色', focus:'形象设定', front:'#e0cabd', back:'#b29a89', hint:'角色设定、表情动作与衍生应用', picks:['cosmic-astra','sylva']},
+    {id:'print', name:'字体与平面设计', code:'平面', focus:'版式实验', front:'#ced6b8', back:'#91a082', hint:'字体实验、字形构建与印刷卡牌', picks:['wild-geometry','word-of-plants']},
+    {id:'play', name:'编程与互动作品', code:'互动', focus:'可玩原型', front:'#bad1cd', back:'#7f9d96', hint:'网页游戏、交互实验与可玩演示', picks:['starling-merge','pet-garden-battle']}
   ];
   const folderRoot = document.querySelector('#entry-folders');
   const escape = M.escape;
   const fileIds = Object.keys(catalogue).filter(id => id !== 'more');
   const fileCount = document.querySelector('#entry-file-count');
-  fileCount.textContent = fileIds.length + ' FILES';
+  fileCount.textContent = fileIds.length + ' 件作品';
   const sample = document.querySelector('#entry-sample');
   let sampleId = null;
   function previewWork(definition, id, count) {
     if (!sample || !id || id === sampleId) return;
     sampleId = id;
     const work = catalogue[id], src = exhibition.covers[id] || work.cover;
-    document.querySelector('#entry-folder-hint').textContent = definition.name + ' / ' + count + ' 件作品';
+    document.querySelector('#entry-folder-hint').textContent = definition.hint + ' / ' + count + ' 件作品';
     document.querySelector('#entry-sample-title').textContent = exhibition.names[id] || work.title;
     const image = document.querySelector('#entry-sample-image');
     image.src = src;
@@ -52,8 +52,9 @@
     button.dataset.launchFolder = definition.id;
     button.style.setProperty('--folder-front', definition.front);
     button.style.setProperty('--folder-back', definition.back);
-    button.setAttribute('aria-label','打开'+definition.name+'文件夹，'+ids.length+'件作品');
-    button.innerHTML = '<span class="entry-folder-art" aria-hidden="true">'+images+'<span class="entry-folder-front"><small>'+definition.code+'</small><b>↗</b></span></span><span class="entry-folder-name">'+definition.name+'</span><span class="entry-folder-count">'+ids.length+' 件作品</span>';
+    button.setAttribute('aria-label','打开'+definition.name+'文件夹，'+ids.length+'件作品。'+definition.hint);
+    button.title = definition.hint;
+    button.innerHTML = '<span class="entry-folder-art" aria-hidden="true">'+images+'<span class="entry-folder-front"><small>'+definition.code+'</small><b>↗</b></span></span><span class="entry-folder-name">'+definition.name+'</span><span class="entry-folder-count">'+ids.length+' 件 · '+definition.focus+'</span>';
     const showHint = () => previewWork(definition, picks[0], ids.length);
     button.addEventListener('pointerenter', showHint);
     button.addEventListener('focus', showHint);

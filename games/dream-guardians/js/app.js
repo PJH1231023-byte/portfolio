@@ -152,6 +152,7 @@
     if (view === 'battle' && name !== 'battle') { paused = true; aimItem = null; save(); }
     if (resizeObserver) { resizeObserver.disconnect(); resizeObserver = null; }
     canvas = null; view = name;
+    document.body.classList.toggle('game-home', name === 'home');
     document.querySelectorAll('[data-nav]').forEach(el => { el.classList.toggle('active',el.dataset.nav === name); if (el.dataset.nav === name) el.setAttribute('aria-current','page'); else el.removeAttribute('aria-current'); });
     ({home:renderHome,map:renderMap,roster:renderRoster,bestiary:renderBestiary,shop:renderShop,recruit:renderRecruit,battle:renderBattle}[name] || renderHome)();
     updateWallet();
@@ -161,9 +162,37 @@
 
   function renderHome() {
     const done = Object.keys(profile.clears).length;
-    const h = D.byId[profile.favorite];
-    const active = (battle && battle.result === 'playing') || profile.active;
-    $('view').innerHTML = `<section class="home"><div class="home-copy"><p class="eyebrow">GUARDIANS OF THE PAINTED DREAM</p><h1>让每一束微光，<br>都有归处。</h1><p class="lead">十幅画境全部开放，自由选择挑战。<br>经营金币工坊、组合守卫，抵挡持续到来的墨潮。</p><div class="actions">${button(active?'继续战斗':'选择关卡',active?'continue':'map','','primary')}${button('抽奖与奖池','recruit')}</div><div class="home-notes"><span>十关自由挑战</span><span>免费金币工坊</span><span>三星彩评</span></div><div class="home-summary">${heroImage(h.id)}<div><strong>${esc(h.name)}正在等你</strong><small>已通关 ${done} / 10 · 已拥有 ${Object.keys(profile.owned).length} / 12 位伙伴</small></div></div>${profile.noviceDraws<2?'<p class="onboarding-note">新手赠送 5 张抽奖券。前两抽固定获得减速伙伴露米与范围攻击伙伴烬团，先组成有不同职能的队伍，再自由挑战。</p>':''}</div><div class="home-art">${heroImage(h.id,'hero-stand')}<img class="home-lotus" src="assets/icon.svg" alt="等待被守护的莲花"><span class="whisper">A LITTLE LIGHT, A BIG DREAM</span></div></section>${resourceGuide()}`;
+    const h = D.byId[profile.favorite] || D.heroes[0];
+    const activeBattle = battle && battle.result === 'playing' ? battle : profile.active?.battle;
+    const missing = D.maps.findIndex((m,i) => !profile.clears[i]);
+    const suggested = missing < 0 ? D.maps.length - 1 : missing;
+    const startIndex = activeBattle ? Math.min(D.maps.length - 1, Math.max(0, Math.floor(Number(activeBattle.index) || 0))) : suggested;
+    const sides = ['jibai','feilan','lumi','ember'].filter(id => id !== h.id).slice(0,2);
+    const cast = [sides[0],h.id,sides[1]];
+    const ticket = '<svg viewBox="0 0 80 80" aria-hidden="true"><defs><linearGradient id="menu-ticket-gold" x2="1" y2="1"><stop stop-color="#fff0b0"/><stop offset="1" stop-color="#dca956"/></linearGradient></defs><path d="M16 16h48v15c-11 0-11 18 0 18v15H16V49c11 0 11-18 0-18Z" fill="url(#menu-ticket-gold)" stroke="#8b642e" stroke-width="2"/><path d="M25 23v34M55 23v34" stroke="#b88741" stroke-width="2" stroke-dasharray="3 4"/><path d="m40 27 4 8 9 2-7 6 1 10-7-5-7 5 1-10-7-6 9-2Z" fill="#fff9dc" stroke="#bb883e" stroke-width="1.5"/></svg>';
+    const arrow = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 4 11 8-11 8Z" fill="currentColor"/></svg>';
+    $('view').innerHTML = `<section class="game-menu" aria-label="浮光守卫游戏主菜单">
+      <div class="gm-backdrop" aria-hidden="true"></div><div class="gm-shade" aria-hidden="true"></div>
+      <div class="gm-motes" aria-hidden="true">${Array.from({length:16},(_,i)=>'<i style="--x:'+((i*37+9)%100)+'%;--y:'+((i*23+11)%100)+'%;--delay:-'+(i*1.7)+'s;--duration:'+(11+i%5*2)+'s"></i>').join('')}</div>
+      <div class="gm-world">
+        <div class="gm-title-block"><p class="gm-eyebrow"><span></span> GUARDIANS OF THE PAINTED DREAM</p><h1 class="gm-title"><span>浮光</span><span>守卫</span></h1><p class="gm-tagline">集结你的伙伴，守住梦境之光。</p></div>
+        <div class="gm-cast" role="group" aria-label="角色展示，点击查看技能">
+          <div class="gm-stage-light" aria-hidden="true"></div><p class="gm-cast-caption">守卫集结 <span>点击角色，认识你的伙伴</span></p>
+          ${cast.map((id,i)=>`<button type="button" class="gm-guardian gm-guardian--${i}" data-action="hero-detail" data-id="${id}" aria-label="查看${esc(D.byId[id].name)}的技能，${profile.owned[id]?'已拥有':'可通过抽奖获得'}" style="--entrance-delay:${.25+i*.14}s">${heroImage(id,'gm-character')}<span class="gm-character-name">${esc(D.byId[id].name)}<small>${profile.owned[id]?'Lv.'+profile.owned[id]+' · 已集结':'可招募'}</small></span></button>`).join('')}
+        </div>
+        <div class="gm-play"><button type="button" class="gm-start" data-action="${activeBattle?'continue':'prepare'}" data-index="${startIndex}"><span class="gm-start-icon">${arrow}</span><span><strong>${activeBattle?'继续守护':'开始守护'}</strong><small>第 ${String(startIndex+1).padStart(2,'0')} 关 · ${esc(D.maps[startIndex].name)}</small></span><span class="gm-start-spark" aria-hidden="true"></span></button>
+          <div class="gm-play-links"><button type="button" data-action="map">选择关卡 <span>10 座梦境全部开放</span></button><button type="button" data-action="replay-intro" aria-label="重播开场动画">开场动画</button></div>
+          <div class="gm-journey"><span>梦境旅程 <b>${done}<small> / 10</small></b></span><span class="gm-journey-nodes" aria-label="已通关${done}关">${D.maps.map((m,i)=>`<i class="${profile.clears[i]?'cleared':''}"></i>`).join('')}</span></div>
+        </div>
+      </div>
+      <nav class="gm-dock" aria-label="游戏功能">
+        <button type="button" class="gm-dock-item" data-nav="roster"><span class="gm-dock-art">${heroImage(h.id)}</span><span class="gm-dock-label"><strong>守卫</strong><small>${Object.keys(profile.owned).length} / ${D.heroes.length} 位伙伴</small></span><span class="gm-dock-arrow" aria-hidden="true">›</span></button>
+        <button type="button" class="gm-dock-item gm-dock-draw" data-nav="recruit"><span class="gm-dock-art">${ticket}</span><span class="gm-dock-label"><strong>抽奖</strong><small>${profile.stamps} 张抽奖券</small></span>${profile.noviceDraws<2?'<span class="gm-newcomer">新手必得伙伴</span>':'<span class="gm-dock-arrow" aria-hidden="true">›</span>'}</button>
+        <button type="button" class="gm-dock-item" data-nav="shop"><span class="gm-dock-art">${itemImage('spark')}</span><span class="gm-dock-label"><strong>商店</strong><small>补给与战斗道具</small></span><span class="gm-dock-arrow" aria-hidden="true">›</span></button>
+        <button type="button" class="gm-dock-item" data-nav="bestiary"><span class="gm-dock-art"><img src="${esc(A.monsterURLs[0] || A.fallback('#78998b'))}" alt=""></span><span class="gm-dock-label"><strong>图鉴</strong><small>${Object.keys(profile.seen).length} / ${D.enemies.length} 种墨怪</small></span><span class="gm-dock-arrow" aria-hidden="true">›</span></button>
+      </nav>
+      <div class="gm-utility"><span>本地存档 · 免费游玩</span><div><button type="button" data-action="currencies">资源与掉券规则</button><span aria-hidden="true">·</span><button type="button" data-action="help">怎么玩</button></div></div>
+    </section>`;
   }
 
   function sceneThumb(map) {

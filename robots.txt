@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /.tmp/
+Disallow: /output/
+Sitemap: https://peijiaweb.vercel.app/sitemap.xml

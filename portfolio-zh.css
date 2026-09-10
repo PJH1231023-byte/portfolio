@@ -1,0 +1,9 @@
+.entry-eyebrow small,.entry-desk-label,.entry-screen-bar,.kicker,.desktop-bar h2,.desktop-side p,.entry-closing-record p{letter-spacing:.08em;text-transform:none}
+.entry-desk-label{gap:16px}
+.entry-desk-label>span{white-space:normal}
+.entry-screen-bar>span:last-child{white-space:nowrap}
+.world-author small{letter-spacing:.16em}
+.entry-direction-guide{display:inline-block;margin-top:16px;padding:7px 0;border:0;border-bottom:1px solid currentColor;background:transparent;color:inherit;font:inherit;font-size:13px;line-height:1.7;cursor:pointer;text-align:left}
+.entry-direction-guide:hover{opacity:.75}
+.entry-direction-guide:focus-visible{outline:2px solid currentColor;outline-offset:5px}
+@media(max-width:650px){.entry-desk-label{font-size:9px;letter-spacing:.04em}.kicker{letter-spacing:.07em}.desktop-bar h2{font-size:12px;letter-spacing:.06em}.entry-direction-guide{font-size:12px;margin-top:10px}}

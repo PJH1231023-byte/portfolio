@@ -1,0 +1,83 @@
+{
+  "gameTitle": "精灵漫游",
+  "version": 1,
+  "selectionConfirmed": true,
+  "defaultHero": "03",
+  "heroes": [
+    {
+      "id": "03",
+      "name": "慢拍",
+      "nameStatus": "working",
+      "visual": "紫色豆荚身体、卷芽、垂落的贝母玻璃翅膀",
+      "reference": "../../output/concepts/jewel-characters-v2.png"
+    },
+    {
+      "id": "04",
+      "name": "棱棱",
+      "nameStatus": "working",
+      "visual": "紫色小龙、晶石角、抱臂、小玫红晶石水滴尾巴与短金链扣",
+      "reference": "assets/hero-04-reference.png"
+    },
+    {
+      "id": "09",
+      "name": "贝眠",
+      "nameStatus": "working",
+      "visual": "奶油色贝母壳头饰、额前卷、捧脸笑",
+      "reference": "../../output/concepts/jewel-additional-characters-v1.png"
+    },
+    {
+      "id": "10",
+      "name": "星啾",
+      "nameStatus": "working",
+      "visual": "浅蓝星形轮廓、小鸟嘴、玻璃翅膀",
+      "reference": "../../output/concepts/jewel-additional-characters-v1.png"
+    },
+    {
+      "id": "12",
+      "name": "晶甲",
+      "nameStatus": "working",
+      "visual": "奶油杏色四足身体、海蓝薄荷晶甲、香槟金边、蜜桃粉晶角、倔强表情",
+      "reference": "assets/hero-12-bright-palette-v1.png",
+      "paletteApproved": true
+    }
+  ],
+  "enemies": [
+    {
+      "id": "05",
+      "name": "绷带獠獠",
+      "behavior": "patrol-charge"
+    },
+    {
+      "id": "06",
+      "name": "六足晶刺兽",
+      "behavior": "patrol-spike"
+    },
+    {
+      "id": "07",
+      "name": "噗珠鸟",
+      "behavior": "patrol-water-projectile",
+      "projectileIsSeparate": true
+    },
+    {
+      "id": "08",
+      "name": "鼓肚角兽",
+      "behavior": "patrol-shockwave"
+    },
+    {
+      "id": "11",
+      "name": "钳钳怪",
+      "behavior": "patrol-claw"
+    }
+  ],
+  "retired": [
+    "01",
+    "02"
+  ],
+  "enemyCanJump": false,
+  "assets": {
+    "roster": "assets/cast-key.png",
+    "supersededAtlas": "assets/cast.png",
+    "supersededAtlasUsable": false
+  },
+  "status": "Playable six-level landscape game; browser and simulation checks passed."
+}

@@ -1,0 +1,11 @@
+# 六场景图集生成记录
+
+工具：内置 image_gen.imagegen。参考 assets/worlds.png 的珠宝材质，生成新的场景布局。
+
+结果：assets/worlds-six-v2.png，实际输出 1536×1024，2 列 × 3 行。Canvas 分别取六个区域作为关卡背景，关卡地图使用对应缩略图。
+
+生成提示词：
+
+Create a NEW game background atlas asset for original jewel fantasy platformer 精灵漫游. Reference image is STYLE reference ONLY: intricate rhinestone mosaic natural environments, gold filigree, opal/precious stones, dreamy rococo miniature craftsmanship. Make a 3072x2048 landscape atlas with EXACTLY SIX equally-sized rectangular panels arranged TWO columns THREE rows, flush adjoining, NO borders, NO text, NO characters, NO UI. Each panel must have a UNIQUE unmistakable environment and composition, not recolor. Each panel itself wide 1536x682 panorama. Top left: PINK QUARTZ BOTANICAL GARDEN, rose gemstone daisies, faceted glass trees, winding distant floral arches in dawn. Top right: PEARL AQUEDUCT, huge white mother-of-pearl scallop shells, tiered Romanesque pearl arcades and turquoise canals, falling bead chains under bright azure sky; no forest. Middle left: JADE WATERFALL GORGE, immense vertical emerald cliffs and luminous jade bamboo, multiple cascading translucent waterfalls, mist, hanging bridges far away. Middle right: AMETHYST GEODE CAVERN, interior deep violet hollow crystalline grotto with overhead stalactites and magenta glowing fissures, luminous quartz columns framing empty navigable-looking middle. Bottom left: AMBER TIDAL COAST, honey gemstone cliffs, fossil spirals and golden coral sculptural reefs, low sun across expansive sea, clear aqua tide pools; no forest or palace. Bottom right: MOONSTONE FLOATING ISLANDS, midnight indigo sky, huge luminous crescent moon, floating white opal rock islands and suspended gold orrery rings, silver star chains, airy vertical void. Consistent sophisticated photoreal handmade jeweled-diorama material across panels. Need midground breathing room so playable platforms overlaid are readable. Avoid embedding playable ground/UI in art. Rich but clear harmonious colors, dreamy miniature jewel architecture, fine gemstone facets, evocative lighting. All SIX panels evenly divided and compositionally independent. Preserve reference texture sophistication; do not substitute painted generic fantasy.
+
+检查：六格主体与构图各异，无角色和文字，珠宝质感一致。原三场景图集保留作历史素材。

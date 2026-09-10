@@ -8,20 +8,22 @@
   <script defer src="js/data.js?v=1"></script>
   <script defer src="js/balance-v2.js?v=2.2"></script><script defer src="js/art.js?v=1"></script><script defer src="js/engine.js?v=2.2"></script><script defer src="js/render.js?v=1"></script><script defer src="js/flow-v2.js?v=2.2"></script>
   <script defer src="js/rewards.js?v=2.1"></script>
-  <script defer src="js/app.js?v=2.2"></script>
+  <script defer src="js/app.js?v=2.3"></script>
   <link rel="stylesheet" href="refresh-v2.css?v=2.2">
+  <link rel="stylesheet" href="menu-v3.css?v=2.3">
+  <link rel="preload" as="image" href="assets/menu-dreamscape.png">
 </head>
 <body>
   <div class="ambient ambient-a" aria-hidden="true"></div><div class="ambient ambient-b" aria-hidden="true"></div>
   <header class="masthead"><button class="brand" data-nav="home" aria-label="浮光守卫主页"><img src="assets/icon.svg" alt=""><span><small>THE PAINTED DREAM</small><b>浮光守卫</b></span></button>
     <nav aria-label="游戏导航"><button data-nav="map">梦境旅程</button><button data-nav="roster">守卫手册</button><button data-nav="bestiary">浊墨图鉴</button><button data-nav="shop">薄雾小铺</button><button data-nav="recruit">抽奖</button></nav>
-    <div class="wallet"><span title="永久星尘，用于培养、商店和招募"><i class="dust-mark"></i><b id="wallet-dust">0</b></span><span title="抽奖券，一枚可招募一次"><i class="stamp-mark"></i><b id="wallet-stamps">0</b></span><button class="round-button" data-action="settings" aria-label="打开设置">☷</button></div>
+    <div class="wallet"><span title="永久星尘，用于培养、商店和招募"><i class="dust-mark"></i><em class="wallet-unit">星尘</em><b id="wallet-dust">0</b></span><span title="抽奖券，一枚可招募一次"><i class="stamp-mark"></i><em class="wallet-unit">抽奖券</em><b id="wallet-stamps">0</b></span><button class="round-button" data-action="settings" aria-label="打开设置">☷</button></div>
   </header>
   <main id="view" tabindex="-1"><section class="loading"><img src="assets/icon.svg" alt=""><h1>正在唤醒花园</h1><p>整理画笔、铺开河道，等一束光落下来。</p></section></main>
   <footer class="site-footer"><span>一段不着急的守护 · 所有进度保存在此浏览器</span><button data-action="help">怎么玩</button></footer>
   <dialog id="modal" aria-labelledby="modal-title"><button id="modal-close" class="modal-close" aria-label="关闭窗口">×</button><p class="eyebrow">A SMALL MOMENT OF WONDER</p><h2 id="modal-title"></h2><div id="modal-body"></div><div id="modal-actions" class="actions"></div></dialog>
   <section id="intro" hidden aria-label="开场动画"><button data-action="skip-intro" class="skip-intro">跳过</button><div class="intro-glow"></div><div id="intro-cast"></div><img class="intro-lotus" src="assets/icon.svg" alt=""><div class="intro-title"><small>GUARDIANS OF THE PAINTED DREAM</small><h1>浮光守卫</h1><p>光停下来的地方，花会重新盛开。</p></div></section>
   <div id="toast" role="status" aria-live="polite"></div><input id="import-save" type="file" accept="application/json,.json" hidden>
-  <noscript><p>这款独立游戏需要启用 JavaScript。请在浏览器中启用 JavaScript 后刷新页面。</p></noscript>
+  <noscript><p>这款独立游戏需要启用 JavaScript。请使用文件夹中的启动游戏.cmd 打开。</p></noscript>
 </body>
 </html>
