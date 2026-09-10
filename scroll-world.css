@@ -212,6 +212,16 @@ iframe.world-exhibit{height:76svh;min-height:590px}
 .arcade-reveal:fullscreen .arcade-mount{height:auto;min-height:0;flex:1 1 auto;border:1px solid #d4c79f44}
 .arcade-reveal:fullscreen iframe{width:100%;height:100%!important;min-height:100%!important;aspect-ratio:auto!important}
 @media(max-width:650px){.arcade-fullscreen{padding:7px 10px}.arcade-reveal:fullscreen{padding:12px}.arcade-reveal:fullscreen .arcade-heading{max-height:28vh;overflow:auto}}
+
+/* Local approval preview: preserve the complete game canvas on desktop.
+   The stage height follows its artwork ratio instead of a short viewport. */
+@media(min-width:901px){
+ .theatre-chapter{height:max(180svh,clamp(1040px,calc(56.25vw + 310px),1450px))}
+ .theatre-scene{height:100svh;min-height:clamp(940px,calc(56.25vw + 180px),1320px)}
+ .arcade-reveal{top:72px;bottom:auto}
+ .arcade-mount{width:100%;height:auto;min-height:0;aspect-ratio:16/10;flex:0 0 auto}
+ .arcade-mount iframe{width:100%;height:100%!important;min-height:0!important;aspect-ratio:auto!important}
+}
 body.reduce-motion .product-study,body.reduce-motion .paper-preview{transform:none}
 body.reduce-motion .plant-print-card{transform:translateX(-50%) rotate(calc(var(--card-position)*14deg))!important}
 

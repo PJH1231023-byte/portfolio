@@ -243,8 +243,8 @@ var workDetails = {
       { src: 'images/spirit-roam-gameplay.png', caption: '粉晶花园 · 多层花阶实机画面', wide: true }
     ],
     gameHint: '横屏游玩 · 方向键移动 / 空格二段跳 / 按住 J 连续攻击 / H 操作说明 / P 或 Esc 暂停',
-    gameEmbed: 'games/spirit-roam/index.html?v=4.10',
-    gameStandalone: 'games/spirit-roam/index.html?v=4.10',
+    gameEmbed: 'games/spirit-roam/index.html?v=4.14',
+    gameStandalone: 'games/spirit-roam/index.html?v=4.14',
     showcase: {
       src: 'media/spirit-friends.webm', poster: 'images/spirit-roam-cover.png',
       title: '精灵漫游 · 伙伴互动与动作展示',

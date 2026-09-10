@@ -588,6 +588,114 @@ dialog button { font-size: 15px; }
   padding: 8px 16px;
 }
 
+/* V4.14: five-companion hero stage.
+   The selected companion owns the centre, stays larger than the supporting
+   cast, and keeps its name readable in both embedded and fullscreen views. */
+@media (min-width: 1000px) {
+  .portfolio-embed .character-stage {
+    overflow: visible;
+  }
+
+  .portfolio-embed #featured,
+  .portfolio-embed:not(.portfolio-fullscreen) #featured,
+  .portfolio-embed.portfolio-fullscreen #featured {
+    width: clamp(390px, 29%, 520px);
+    height: 92%;
+    left: 50%;
+    right: auto;
+    top: auto;
+    bottom: 14%;
+    translate: -50% 0;
+    z-index: 7;
+    transform-origin: 50% 88%;
+    filter:
+      drop-shadow(0 20px 16px rgba(21, 16, 37, .48))
+      drop-shadow(0 0 34px rgba(255, 223, 245, .3));
+  }
+
+  .portfolio-embed .character-stage .party-member {
+    width: 23%;
+    height: 72%;
+    bottom: 17%;
+    z-index: 2;
+    transform-origin: 50% 86%;
+  }
+
+  .portfolio-embed .character-stage .party-0 { left: 5%; right: auto; }
+  .portfolio-embed .character-stage .party-1 { left: 21%; right: auto; }
+  .portfolio-embed .character-stage .party-2 { left: auto; right: 21%; }
+  .portfolio-embed .character-stage .party-3 { left: auto; right: 5%; }
+
+  .portfolio-embed .character-caption,
+  .portfolio-embed:not(.portfolio-fullscreen) .character-caption {
+    width: 100%;
+    height: 68px;
+    right: auto;
+    bottom: 2%;
+    z-index: 9;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .portfolio-embed #featured-number,
+  .portfolio-embed #featured-name,
+  .portfolio-embed #featured-line,
+  .portfolio-embed:not(.portfolio-fullscreen) #featured-number,
+  .portfolio-embed:not(.portfolio-fullscreen) #featured-name,
+  .portfolio-embed:not(.portfolio-fullscreen) #featured-line {
+    display: block !important;
+    position: relative;
+    z-index: 2;
+    width: max-content;
+    max-width: 42%;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0 2px 12px rgba(28, 17, 45, .9);
+  }
+
+  .portfolio-embed #featured-number,
+  .portfolio-embed:not(.portfolio-fullscreen) #featured-number {
+    font-size: 11px !important;
+    line-height: 1.2;
+    letter-spacing: .2em;
+  }
+
+  .portfolio-embed #featured-name,
+  .portfolio-embed:not(.portfolio-fullscreen) #featured-name {
+    margin-top: 3px;
+    margin-bottom: 2px;
+    color: #fff4e8;
+    font-size: clamp(27px, 2vw, 34px) !important;
+    line-height: 1.08;
+    letter-spacing: .22em;
+  }
+
+  .portfolio-embed #featured-line,
+  .portfolio-embed:not(.portfolio-fullscreen) #featured-line {
+    color: #ead8e8;
+    font-size: 13px !important;
+    line-height: 1.35;
+    white-space: nowrap;
+  }
+
+  .portfolio-embed .character-caption #v4-profile-open,
+  .portfolio-embed:not(.portfolio-fullscreen) .character-caption #v4-profile-open,
+  .portfolio-embed.portfolio-fullscreen .character-caption #v4-profile-open {
+    position: absolute;
+    left: calc(50% + 7px);
+    right: auto;
+    top: 78px;
+    bottom: auto;
+    width: 358px;
+    height: 56px;
+    min-height: 56px;
+    margin: 0;
+    padding: 8px 16px;
+    transform: none;
+    pointer-events: auto;
+  }
+}
+
 .portfolio-embed:not(.portfolio-fullscreen) .roster-wrap {
   z-index: 8;
 }
